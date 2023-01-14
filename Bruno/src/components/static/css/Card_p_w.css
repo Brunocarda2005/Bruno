@@ -1,0 +1,216 @@
+
+
+:root {
+  
+  /* colors */
+  
+  --color-principal: #EDF9FF;
+  --color-secundario: #5C77FF;
+  --color-terciario: #A5E1F9;
+  --color-cuarto: /*#808DA5*/ #717D91;
+  --color-quinto: #00193C;
+  --color-sexto: #001738;
+  
+  /* border */
+  
+  --border-radius-max: 20px;
+  --border-radius-med: 7px;
+  --border-radius-min: 2px;
+  
+ 
+  /* font-size */
+  
+  --font-size-max: 2em;
+  --font-size-med: 1.3em;
+  --font-size-med_min : .9em;
+  --font-size-min: .7em;
+  
+}
+
+
+
+
+.project_work {
+  
+  padding-top: 150px;
+  
+}
+
+
+.project_work-main {
+  
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5%;
+  color: var(--color-principal);
+  transition: color .4s ease;
+  text-align: center;
+  
+}
+body.days .project_work-main {
+  
+  color: var(--color-sexto);
+  
+}
+
+
+.project_work-main-ilustracion {
+  
+  background: url('../svg/project.svg');
+  background-size: 100% 100%;
+  width: 100%;
+  height: 300px;
+  
+}
+
+.Work {
+
+  background: url('../svg/undraw_pair_programming_re_or4x.svg');
+  background-size: 100% 100%;
+
+}
+
+
+.project_work-main h3 {
+  
+  margin-top: 15%;
+  font-size: 2rem;
+  
+}
+
+
+.project_work-cards_project_work {
+  
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  
+}
+
+.project_work-cards_project_work-text {
+  
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  color: var(--color-terciario);
+  transition: color .4s ease;
+  font-weight: 500;
+  font-size: 1em;
+  
+}
+body.days .project_work-cards_project_work-text {
+  
+  color: var(--color-cuarto);
+  
+} 
+
+
+.project_work-card_project_work-cards {
+  
+  width: 90%;
+  margin: auto;
+  margin-top: 20%;
+  
+  
+}
+
+
+.project_work-card_project_work-cards-card {
+  
+  width: 100%;
+  padding: 5%;
+  position: relative;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  background: var(--color-terciario);
+  color: var(--color-sexto);
+  margin-bottom: 10%;
+  
+}
+
+.project_work-card_project_work-cards-card-mark {
+  
+  width: 20%;
+  height: 40%;
+  position: absolute;
+  right: 4%;
+  top: -4%;
+  border-radius: 3px 5px 0 0;
+  overflow: hidden
+  
+}
+
+
+@media (min-width: 700px){
+
+
+  .project_work-card_project_work-cards-card-mark {
+
+    height: 60%;
+
+  }
+
+
+
+}
+
+
+
+.project_work-card_project_work-cards-card-mark span {
+  
+  position: absolute;
+  right: -4px;
+  top: 0;
+  width: 15px;
+  height: 20px;
+  background: #394FBC;
+  z-index: -1;
+  
+}
+
+.mark {
+  
+  width: 95%;
+  height: 95%;
+  background: var(--color-secundario);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 64.85%, 0% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.mark img {
+  
+  margin-bottom: 30%;
+  width: 30%;
+  
+}
+
+
+.project_work-card_project_work-cards-card-text a {
+  
+  color: var(--color-sexto);
+  font-weight: 700;
+  
+}
+
+.project_work-card_project_work-cards-card-text-des {
+  
+  margin: 5% 0;
+  width: 75%;
+  color: var(--color-cuarto);
+  
+}
+
+.project_work-card_project_work-cards-card-text-calendar {
+  
+  margin: 0;
+  color: var(--color-quinto);
+  font-size: 1em;
+  
+}

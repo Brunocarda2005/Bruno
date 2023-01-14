@@ -1,0 +1,407 @@
+/* ============================== variables  =================================== */
+
+:root {
+  /* colors */
+
+  --color-principal: #edf9ff;
+  --color-secundario: #5c77ff;
+  --color-terciario: #dfecff;
+  --color-cuarto: #717d91;
+  --color-quinto: #00193c;
+  --color-sexto: #001738;
+
+  /* border */
+
+  --border-radius-max: 20px;
+  --border-radius-med: 7px;
+  --border-radius-min: 2px;
+
+  /* box shadow */
+
+  --box-shadow: 0 0 18px -1.5px rgba(0, 17, 40, 0.76);
+  --box-shadow-day: 3px 3px 17px 1px #c9c9c9;
+
+  /* font-size */
+
+  --font-size-max: 2em;
+  --font-size-med: 1.3em;
+  --font-size-med_min: 0.8em;
+  --font-size-min: 0.7em;
+}
+
+/* ================================ skills ==================================== */
+
+.skills {
+  min-height: 500px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 3;
+  padding-top: 150px;
+  margin: 100px 0;
+}
+
+.skills h3 {
+  color: var(--color-principal);
+  border-bottom: 2px solid var(--color-secundario);
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+  font-size: var(--font-size-med);
+  padding: 5px 20px;
+  margin-bottom: 30px;
+  transition: color 0.4s ease;
+}
+
+body.days .skills h3 {
+  color: var(--color-quinto);
+}
+
+.skills h4 {
+  display: flex;
+  justify-content: center;
+  font-size: var(--font-size-med_min);
+  margin: auto;
+  margin-top: 30px;
+  width: 15ch;
+  color: var(--color-principal);
+  transition: color 0.4s ease;
+}
+
+body.days .skills h4 {
+  color: var(--color-quinto);
+}
+
+.skills-content-aside {
+  position: relative;
+}
+
+.skills-content {
+  width: 60vw;
+  margin: auto;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.skills-content-frontend,
+.skills-content-backend,
+.skills-content-UI_UX {
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  gap: 30px;
+}
+
+.skills-content-button {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 4;
+}
+
+.skills-content-button button {
+  border: none;
+  outline: none;
+  background: none;
+  height: 100%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #edf9ff;
+  font-size: 3rem;
+  background: var(--color-quinto);
+  transition: color 0.4s ease, background 0.4s ease;
+}
+
+body.days .skills-content-button button {
+  background: var(--color-principal);
+  color: var(--color-quinto);
+}
+
+.skills-frontend-content-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 170px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: var(--border-radius-med);
+  -webkit-box-shadow: var(--box-shadow);
+  -moz-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+  transition: box-shadow 0.4s ease;
+}
+
+body.days .skills-frontend-content-card {
+  -webkit-box-shadow: var(--box-shadow-day);
+  -moz-box-shadow: var(--box-shadow-day);
+  box-shadow: var(--box-shadow-day);
+}
+
+.Javascript {
+  animation-name: transformLeft;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.React {
+  animation-name: transformRight;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.Html {
+  animation-name: transformLeft;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.Css {
+  animation-name: transformRight;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.Bootstrap {
+  animation-name: transformLeft;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.Scss {
+  animation-name: transformRight;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@media (min-width: 460px) {
+  .Javascript {
+    animation-name: transformRight;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .React {
+    animation-name: transformLeft;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .Html {
+    animation-name: transformRight;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .Css {
+    animation-name: transformLeft;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .Bootstrap {
+    animation-name: transformRight;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .Scss {
+    animation-name: transformLeft;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media (min-width: 978px) {
+  .Javascript {
+    animation-name: transformRight;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .React {
+    animation-name: transformTop;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .Html {
+    animation-name: transformLeft;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .Css {
+    animation-name: transformRight;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .Bootstrap {
+    animation-name: transformBottom;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .Scss {
+    animation-name: transformLeft;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media (max-width: 460px) {
+  .Javascript {
+    animation-name: transformRight;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .React {
+    animation-name: transformRight;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .Html {
+    animation-name: transformLeft;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .Css {
+    animation-name: transformRight;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .Bootstrap {
+    animation-name: transformLeft;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .Scss {
+    animation-name: transformRight;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes transformTop {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+@keyframes transformBottom {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes transformRight {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes transformLeft {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+.skills-frontend-content-card-img {
+  position: absolute;
+  top: -30%;
+  width: 100%;
+}
+
+.skills-frontend-content-card-info {
+  background: var(--color-secundario);
+  width: 100%;
+  height: 70%;
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: var(--box-shadow);
+  transition: box-shadow .4s ease-in;
+}
+
+.skills-frontend-content-card-info p,
+.skills-frontend-content-card-info a {
+  font-size: var(--font-size-med_min);
+  color: var(--color-sexto);
+}
+
+.skills-frontend-content-card-info a {
+  color: var(--color-sexto);
+  font-weight: 700;
+}
+
+.level {
+  position: relative;
+  width: 90%;
+  height: 8%;
+  background: var(--color-terciario);
+  opacity: 0.5;
+  border-radius: var(--border-radius-min);
+}
+
+.level::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  background: var(--color-sexto);
+  opacity: 1;
+  border-radius: var(--border-radius-min);
+}
+
+.level::after {
+  content: "80%";
+  position: relative;
+  top: 100%;
+  left: 70%;
+}
+
+@media (min-width: 700px) {
+  .skills-frontend-content-card {
+    width: 200px;
+    height: 200px;
+  }
+}

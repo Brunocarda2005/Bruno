@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  font-family: "Roboto";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Roboto";
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background 0.4s ease;
+  background: var(--color-quinto);
+  overflow-x: hidden;
+}
+
+body.days {
+  background: var(--color-principal);
+}
+
+a {
+  text-decoration: none;
+}
+
+a, button {
+
+  cursor: pointer;
+
+}
