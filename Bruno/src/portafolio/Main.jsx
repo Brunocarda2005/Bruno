@@ -16,7 +16,7 @@ export default function Main() {
   const [info, setInfo] = useState("");
 
   const openInfo = () => {
-    if (info == "openInfo") {
+    if (info === "openInfo") {
       setInfo("");
     } else {
       setInfo("openInfo");
@@ -73,7 +73,7 @@ export default function Main() {
         title="Works"
         parrafo="Enter and visit my works"
         link="Lest Go"
-        to="/work"
+        to="/Work"
         il="works"
       />
 
@@ -83,7 +83,7 @@ export default function Main() {
         title="PROJECTS"
         parrafo="you can enter and watch how I solved problems and developed functionalities with all the technologies I learned"
         link="Lest Go"
-        to="/project"
+        to="/Project"
         il="projects"
       />
 

@@ -15,7 +15,7 @@ function App() {
           {/* esta es la pagina principal del proyecto*/}
           <Main />
         </Route>
-        <Route path="/Bruno/project">
+        <Route path="/Bruno/Project">
           {/* esta es la pagina en donde estan todos los proyectos de mi github */}
           <Project />
         </Route>
