@@ -73,7 +73,7 @@ export default function Main() {
         title="Works"
         parrafo="Enter and visit my works"
         link="Lest Go"
-        to="/Work"
+        to="/Bruno/Work"
         il="works"
       />
 
@@ -83,7 +83,7 @@ export default function Main() {
         title="PROJECTS"
         parrafo="you can enter and watch how I solved problems and developed functionalities with all the technologies I learned"
         link="Lest Go"
-        to="/Project"
+        to="/Bruno/Project"
         il="projects"
       />
 
