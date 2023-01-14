@@ -12,11 +12,11 @@ import { FaCode } from "react-icons/fa";
 export default function AsideA() {
   return (
     <div className="header-aside-a">
-      <AncordA href={"/#start"} key={"#start"} text={"START"} icone={"FaHome"}>
+      <AncordA href={"/Bruno/#start"} key={"#start"} text={"START"} icone={"FaHome"}>
         <FaHome />
       </AncordA>
       <AncordA
-        href={"/#about"}
+        href={"/Bruno/#about"}
         key={"#about"}
         text={"ABOUT"}
         icone={"FaUserAlt"}
@@ -24,7 +24,7 @@ export default function AsideA() {
         <FaUserAlt />
       </AncordA>
       <AncordA
-        href={"/#skills"}
+        href={"/Bruno/#skills"}
         key={"#skills"}
         text={"SKILLS"}
         icone={"FaDraftingCompass"}
@@ -32,7 +32,7 @@ export default function AsideA() {
         <FaDraftingCompass />
       </AncordA>
       <AncordA
-        href={"/#works"}
+        href={"/Bruno/#works"}
         key={"#work"}
         text={"WORKS"}
         icone={"FaPencilRuler"}
@@ -40,7 +40,7 @@ export default function AsideA() {
         <FaPencilRuler />
       </AncordA>
       <AncordA
-        href={"/#services"}
+        href={"/Bruno/#services"}
         key={"#services"}
         text={"SERVICES"}
         icone={"FaPencilRuler"}
@@ -48,7 +48,7 @@ export default function AsideA() {
         <FaPencilRuler />
       </AncordA>
       <AncordA
-        href={"/#projects"}
+        href={"/Bruno/#projects"}
         key={"#projects"}
         text={"PROJECTS"}
         icone={"FaBook"}
@@ -56,7 +56,7 @@ export default function AsideA() {
         <FaBook />
       </AncordA>
       <AncordA
-        href={"/#contact"}
+        href={"/Bruno/#contact"}
         key={"#contact"}
         text={"CONTACT"}
         icone={"FaPhone"}
@@ -64,7 +64,7 @@ export default function AsideA() {
         <FaPhone />
       </AncordA>
       <AncordA
-        href={"/#footer"}
+        href={"/Bruno/#footer"}
         key={"#footer"}
         text={"FOOTER"}
         icone={"FaCode"}
