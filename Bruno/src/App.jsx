@@ -11,15 +11,15 @@ function App() {
       <main className="app">
 
         <Header />
-        <Route path="/">
+        <Route path="/Bruno">
           {/* esta es la pagina principal del proyecto*/}
           <Main />
         </Route>
-        <Route path="/project">
+        <Route path="/Bruno/project">
           {/* esta es la pagina en donde estan todos los proyectos de mi github */}
           <Project />
         </Route>
-        <Route path="/Work">
+        <Route path="/Bruno/Work">
           {/* esta es la oagina en donde estan todos mis trabajos */}
           <Work />
         </Route>
