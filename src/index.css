@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* colors */
+
+  --color-principal: #d8d8d8;
+  --color-secundario: #5c77ff;
+  --color-terciario: #858585;
+  --color-cuarto: #cbcbcb2f;
+  --color-quinto: #121212;
+  --color-sexto: #151516;
+
+  /* border */
+
+  --border-radius-max: 20px;
+  --border-radius-med: 7px;
+  --border-radius-min: 2px;
+
+  /* box shadow */
+
+  --box-shadow: 0 0 10px 2px #0000002f;
+
+  /* font-size */
+
+  --font-size-max: 2em;
+  --font-size-med: 1.3em;
+  --font-size-med_min: 0.8em;
+  --font-size-min: 0.7em;
+}
+
+* {
+  font-family: "Poppins";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Poppins";
+  font-weight: 800;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100vw;
+  overflow-x: hidden;
+  animation-name: startScroll;
+  animation-duration: 12s;
+  animation-fill-mode: forwards;
+}
+
+body {
+  width: 100vw;
+  background-color: var(--color-quinto);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.start {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-principal);
+  z-index: 9999;
+  top: 0;
+  display: flex;
+  align-items: center;
+  filter: contrast(20);
+  animation-name: start;
+  animation-duration: 3.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes start {
+  0% {
+    filter: contrast(20);
+  }
+  80% {
+    filter: contrast(20);
+    opacity: 1;
+  }
+  99% {
+    filter: contrast(1);
+    opacity: 1;
+    display: flex;
+  }
+  100% {
+    filter: contrast(1);
+    opacity: 0;
+    display: none;
+  }
+}
+
+.burbujeL {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-quinto);
+  border-radius: 50%;
+  filter: blur(10px);
+  animation-name: burbujel;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.burbujeR {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-quinto);
+  border-radius: 50%;
+  filter: blur(10px);
+  animation-name: burbujer;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.expand {
+  content: "";
+  position: absolute;
+  left: 45vw;
+  width: 4rem;
+  height: 4rem;
+  opacity: 0;
+  border-radius: 50%;
+  z-index: 3;
+  background-color: var(--color-quinto);
+  animation-name: expand;
+  animation-delay: 1.8s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes burbujel {
+  0% {
+    left: 0;
+  }
+  95% {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    opacity: 1;
+  }
+  100% {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    opacity: 0;
+  }
+}
+@keyframes burbujer {
+  0% {
+    left: 100vw;
+  }
+  95% {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    opacity: 1;
+  }
+  100% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+@keyframes expand {
+  0% {
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 4rem;
+    height: 4rem;
+  }
+  20% {
+    opacity: 1;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 4rem;
+    height: 4rem;
+  }
+  100% {
+    opacity: 1;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 300vw;
+    height: 300vw;
+  }
+}
+
+@keyframes startScroll {
+  0% {
+    overflow-y: hidden;
+  }
+  100% {
+    overflow-y: auto;
+  }
+}

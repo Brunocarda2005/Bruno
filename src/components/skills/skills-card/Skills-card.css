@@ -1,0 +1,47 @@
+.social__content__background__app__skills__cards {
+  width: 11rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  place-items: center;
+}
+
+.skills-frontend-content-card {
+  padding: .8rem;
+  max-width: 4rem;
+  border-radius: var(--border-radius-med);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-sexto);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  position: relative;
+}
+
+.skills-frontend-content-card-img {
+  width: 1.3rem;
+}
+
+.skills-frontend-content-card-span {
+  width: 100%;
+  height: 100%;
+  outline: 2px solid blue;
+  position: absolute;
+  opacity: 0;
+}
+
+
+@media (min-width: 700px) {
+  .social__content__background__app__skills__cards {
+    width: 20rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .skills-frontend-content-card {
+    padding: 1rem;
+  }
+  .skills-frontend-content-card-img {
+    width: 1.5rem;
+  }
+}

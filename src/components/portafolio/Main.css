@@ -1,0 +1,50 @@
+/* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 0.3rem; /* Anchura de la barra de desplazamiento */
+}
+/* Estilo del agarre de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background-color: #5c77ff; /* Color del agarre */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo del agarre de la barra de desplazamiento al pasar el cursor sobre él */
+::-webkit-scrollbar-thumb:hover {
+  filter: #4a60cd; /* Color del agarre al pasar el cursor sobre él */
+}
+
+.blob {
+  position: absolute;
+  bottom: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+
+.blob-span {
+  width: 40vw;
+  height: 100px;
+  background-color: var(--color-secundario);
+  filter: blur(300px);
+  border-radius: 50%;
+  box-shadow: 0 0 20px 10px var(--color-secundario),
+              0 0 30px 20px var(--color-secundario),
+              0 0 40px 30px var(--color-secundario),
+              0 0 50px 40px var(--color-secundario),
+              0 0 60px 50px var(--color-secundario),
+              0 0 70px 60px var(--color-secundario),
+              0 0 80px 70px var(--color-secundario),
+              0 0 90px 80px var(--color-secundario),
+              0 0 100px 90px var(--color-secundario)
+  ;
+}
+
+@media (min-width: 700px) {
+  .blob-span {
+    filter: blur(350px);
+  }
+}

@@ -1,0 +1,91 @@
+.header__nav__content {
+  width: 5.8rem;
+  height: 3rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: .5rem;
+  transition: all .3s ease-in-out;
+  position: absolute;
+  top: 10%;
+}
+
+.header__nav__content:hover {
+  height: 60vh;
+}
+
+.header__nav__content_show {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  z-index: 9;
+  transition: all .1s ease-in-out
+}
+.header__nav__content:hover .header__nav__content_show  {
+  transform: translateY(-150%);
+}
+
+.header__nav__content__card {
+  background-color: var(--color-sexto);
+  min-height: 2rem;
+  min-width: 4rem;
+  max-width: 4rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-med);
+  position: absolute;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.header__nav__content:hover .header__nav__content__card {
+  position: relative;
+  box-shadow: var(--box-shadow);
+} 
+
+.header__nav__content__card__img-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__nav__content__card__img-content__img {
+  width: 75%;
+}
+
+.true {
+  position: relative;
+  z-index: 2;
+  min-width: 4.8rem;
+  box-shadow: var(--box-shadow);
+}
+
+
+.footer_link-img {
+  position: absolute;
+  bottom: -20%;
+  width: 100%;
+}
+
+/* tranciciones complejas */
+
+
+.header__nav__content:hover .header__nav__content__card.skills-link {
+  transform: translateY(50%);
+  transition: all .3s ease-in-out;
+}
+
+.header__nav__content:hover .header__nav__content__card.projects-link {
+  transform: translateY(100%);
+  transition: all .6s ease-in-out;
+}
+
+.header__nav__content:hover .header__nav__content__card.footer-link  {
+  transform: translateY(150%);
+  transition: all .9s ease-in-out;
+}
