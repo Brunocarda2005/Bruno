@@ -85,26 +85,24 @@ body.days .works-card_content-text p {
 .footer {
   margin-top: 30rem;
   width: 100%;
-  height: auto;
   position: relative;
 }
 
 .footer-img {
   width: 100%;
   position: absolute;
-  bottom: 100%;
+  bottom: 3rem;
 }
 
 .footer-content {
-  background: var(--color-sexto);
+  background-color: var(--color-sexto);
   transition: background 0.4s ease;
+  height: 3rem;
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   color: var(--color-principal);
 }
 
-body.days .footer-content {
-  background: var(--color-terciario);
-}
