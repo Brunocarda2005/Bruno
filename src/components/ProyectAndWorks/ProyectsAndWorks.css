@@ -7,7 +7,7 @@
 }
 
 .projects-content {
-  width: 70%;
+  width: 40%;
   margin: auto;
   display: grid;
   place-items: center;
@@ -18,7 +18,6 @@
 
 .project_work-card_project_work-cards-card {
   width: 100%;
-  min-width: 10rem;
   max-width: 20rem;
 }
 
@@ -80,9 +79,10 @@
   }
 
   .projects-content {
+    width: 70%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 3rem;
+    gap: 2rem;
   }
 
   .project_work-card_project_work-cards-card {

@@ -5,6 +5,7 @@ import ProyectsAndWorks from "../ProyectAndWorks/ProyectsAndWorks";
 import Footer from "../footer/Footer";
 import Skills from "../skills/Skills";
 import UseState from "../../context/useContext";
+import Contact from "../contact/Contact";
 
 export default function Main() {
   return (
@@ -18,6 +19,7 @@ export default function Main() {
         <Skills />
         <ProyectsAndWorks />
       </UseState>
+      <Contact />
       <Footer />
     </>
   );

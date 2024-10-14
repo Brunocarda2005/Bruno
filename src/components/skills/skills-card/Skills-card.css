@@ -1,4 +1,4 @@
-.social__content__background__app__skills__cards {
+.social__content__skills__cards {
   width: 11rem;
   margin: auto;
   display: grid;
@@ -34,7 +34,7 @@
 
 
 @media (min-width: 700px) {
-  .social__content__background__app__skills__cards {
+  .social__content__skills__cards {
     width: 20rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }

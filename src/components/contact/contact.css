@@ -1,0 +1,207 @@
+span,
+p,
+h {
+  color: var(--color-principal);
+}
+
+.app__contact {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-top: 5rem;
+  position: relative;
+}
+
+.app__contact__conten {
+  width: 90%;
+  position: relative;
+  background-color: #171719;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius-med);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.app__contact__conten__about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: #0a0e15;
+  padding: 1.6rem;
+  border-radius: var(--border-radius-med);
+  z-index: 8;
+  position: relative;
+}
+
+.app__contact__conten__about::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: repeating-conic-gradient(
+    #1a1a1a11 0.00000045%,
+    #00000030 0.0005%
+  );
+}
+
+.app__contact__conten__about__profile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  .app__contact__conten__about__profile__title {
+    color: var(--color-principal);
+    display: flex;
+    gap: 0.4rem;
+    font-weight: 700;
+    font-size: 0.8em;
+    #lastName {
+      color: var(--color-secundario);
+    }
+  }
+}
+
+.app__contact__conten__about__profile__img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.app__contact__conten__about__contact {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  color: var(--color-principal);
+  .app__contact__conten__about__contact__info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.6em;
+    img {
+      width: 1rem;
+    }
+  }
+}
+
+.app__contact__conten__about__aboutText {
+  width: 95%;
+  .app__contact__conten__about__aboutText__title {
+    color: var(--color-secundario);
+    font-size: 0.9em;
+  }
+  .app__contact__conten__about__aboutText__text {
+    width: 90%;
+    font-size: 0.6em;
+    margin-top: 0.2rem;
+  }
+}
+
+.app__contact__conten__cards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__contact__conten__cards__content {
+  width: 70%;
+  height: 100%;
+  min-height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.app__contact__conten__cards__content__card {
+  width: 100%;
+  max-width: 12rem;
+  height: 5rem;
+  border-radius: var(--border-radius-med);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem;
+  position: relative;
+  z-index: 6;
+  .app__contact__conten__cards__content__card__title {
+    width: 100%;
+    font-size: 0.7em;
+  }
+  .app__contact__conten__cards__content__card__link {
+    font-size: 0.4em;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    span {
+      padding: 0.2rem;
+      border-radius: var(--border-radius-min);
+      box-shadow: var(--box-shadow);
+    }
+  }
+}
+.Linkedin {
+  background-color: #0e76a8;
+  .app__contact__conten__cards__content__card__link span {
+    background-color: #0a0e15;
+  }
+}
+
+.GitHub {
+  background-color: #0a0e15;
+  .app__contact__conten__cards__content__card__link span {
+    background-color: #0e76a8;
+  }
+}
+
+.app__contact__conten__cards__footer {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  position: absolute;
+  bottom: 0;
+  .app__contact__conten__cards__footer__img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .app__contact__conten__cards__content {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 700px) {
+  .app__contact__conten {
+    width: 80%;
+    height: 80%;
+    flex-direction: row;
+  }
+  .app__contact__conten__about {
+    width: 50%;
+  }
+  .app__contact__conten__cards {
+    width: 80%;
+    align-items: center;
+  }
+  .app__contact__conten__cards__content {
+    width: 80%;
+    height: 80%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+  }
+}

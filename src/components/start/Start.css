@@ -50,10 +50,6 @@
   color: var(--color-principal);
 }
 
-body.days .main-me-content-h {
-  color: var(--color-quinto);
-}
-
 .main-me-content-h b {
   color: var(--color-secundario);
 }
@@ -64,10 +60,6 @@ body.days .main-me-content-h {
   color: var(--color-terciario);
   opacity: 0.9;
   font-size: var(--font-size-min);
-}
-
-body.days .main-me-content p {
-  color: var(--color-cuarto);
 }
 
 .main-me-content-contact {
@@ -81,10 +73,6 @@ body.days .main-me-content p {
 .main-me-content-contact a {
   color: var(--color-principal);
   transition: color 0.4s ease;
-}
-
-body.days .main-me-content-contact a {
-  color: var(--color-quinto);
 }
 
 .main-me-content-a {
@@ -101,12 +89,23 @@ body.days .main-me-content-contact a {
   background-color: var(--color-secundario);
   color: var(--color-principal);
   font-weight: 600;
+  &&::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: repeating-conic-gradient(
+      #1a1a1a0c 0.00000045%,
+      #0000001f 0.00005%
+    );
+    border-radius: var(--border-radius-max);
+  }
 }
 .main-me-content-a:hover {
-  filter: brightness(90%);
+  filter: brightness(95%);
 }
 
- 
 .main-me-content-a-text {
   position: absolute;
   z-index: 8;
