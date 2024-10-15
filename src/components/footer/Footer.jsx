@@ -1,4 +1,5 @@
 import wave from "../../static/svg/wave.svg";
+import "./Footer.css";
 
 export default function Footer() {
   return (

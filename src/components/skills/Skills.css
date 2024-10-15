@@ -15,9 +15,16 @@
 }
 
 .title-skills {
-  width: 100%;
+  width: 90%;
+  height: 14em;
   display: flex;
+  align-items: center;
   justify-content: center;
+  background-color: var(--color-sexto);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius-med);
+  outline: 1px solid #ffffff04;
 }
 
 .title-skills-content {
@@ -26,7 +33,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
 }
 
 .title-skills-content-img {
@@ -51,6 +57,10 @@
     flex-direction: row-reverse;
     justify-content: space-around;
     gap: 3rem;
+  }
+
+  .title-skills {
+    width: 60%;
   }
 
   .title-skills-content {

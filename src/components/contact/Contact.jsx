@@ -6,6 +6,9 @@ import HeaderContact from "./header/Header";
 export default function Contact() {
   return (
     <main className="app__contact" id="contact">
+      <div className="blob position-center">
+        <span className="blob-span"></span>
+      </div>
       <div className="app__contact__conten">
         <HeaderContact />
         <aside className="app__contact__conten__cards">

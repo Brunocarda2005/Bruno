@@ -5,7 +5,7 @@ import imgMail from "../../../static/svg/Mailsvg.svg";
 export default function HeaderContact() {
   return (
     <aside className="app__contact__conten__about">
-      <section className="app__contact__conten__about__profile">
+      <section className="app__contact__conten__about__profile zindexHide">
         <picture className="app__contact__conten__about__profile__img">
           <img
             className="app__contact__conten__about__profile__img"
@@ -18,7 +18,7 @@ export default function HeaderContact() {
           <span id="lastName">Cardamone</span>
         </div>
       </section>
-      <section className="app__contact__conten__about__contact">
+      <section className="app__contact__conten__about__contact zindexHide">
         <aside className="app__contact__conten__about__contact__info phone">
           <img src={imgPhone} alt="" />
           <span>+54 9 2477685189</span>
@@ -28,8 +28,10 @@ export default function HeaderContact() {
           <span>Brunocardamone03@gmial.com</span>
         </aside>
       </section>
-      <section className="app__contact__conten__about__aboutText">
-        <h5 className="app__contact__conten__about__aboutText__title">About me</h5>
+      <section className="app__contact__conten__about__aboutText zindexHide">
+        <h5 className="app__contact__conten__about__aboutText__title">
+          About me
+        </h5>
         <article className="app__contact__conten__about__aboutText__text">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
