@@ -39,22 +39,7 @@ h {
   position: relative;
 }
 
-.zindexHide {
-  z-index: 6;
-}
-
-.app__contact__conten__about::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  background: repeating-conic-gradient(
-    #1a1a1a11 0.00000045%,
-    #00000030 0.0005%
-  );
-}
-
+ 
 .app__contact__conten__about__profile {
   width: 100%;
   display: flex;
@@ -109,6 +94,61 @@ h {
   }
 }
 
+.app__contact__conten__about__change {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.app__contact__conten__about__change__content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: var(--color-principal);
+}
+
+.app__contact__conten__about__change__content__links {
+  font-size: 0.7em;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.app__contact__conten__about__change__content__links__link {
+  cursor: pointer;
+  transition: transform .4s ease-in-out;
+}
+
+.show-false {
+  font-size: 0.8em;
+  opacity: 0.5;
+}
+
+.show-true {
+  font-size: 1em;
+  opacity: 1;
+}
+
+.contacto.show-false {
+  transform: translateX(170%);
+}
+
+.contacto.show-true {
+  transform: translateX(0);
+}
+
+.experiencia.show-false {
+  transform: translateX(0%);
+}
+
+.experiencia.show-true {
+  transform: translateX(-100%);
+}
+
 .app__contact__conten__cards {
   width: 100%;
   height: 100%;
@@ -118,7 +158,7 @@ h {
 }
 
 .app__contact__conten__cards__content {
-  width: 70%;
+  width: 90%;
   height: 100%;
   min-height: 15rem;
   display: flex;
@@ -232,8 +272,9 @@ h {
     width: 50%;
   }
   .app__contact__conten__cards {
-    width: 80%;
-    align-items: center;
+    width: 100%;
+    align-items: start;
+    padding-top: 1.5rem;
   }
   .app__contact__conten__cards__content {
     width: 80%;

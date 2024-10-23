@@ -1,0 +1,15 @@
+.experiencia {
+    z-index: 5;
+}
+
+.experiencia__item__content__text__title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.experiencia__item__content__text__title__empresa {
+    color: var(--color-principal);
+}
+.experiencia__item__content__text__title__tiempo {
+    color: var(--color-terciario);
+}
