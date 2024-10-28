@@ -133,19 +133,19 @@ h {
   opacity: 1;
 }
 
-.contacto.show-false {
+.contacto-link.show-false {
   transform: translateX(170%);
 }
 
-.contacto.show-true {
+.contacto-link.show-true {
   transform: translateX(0);
 }
 
-.experiencia.show-false {
+.experiencia-link.show-false {
   transform: translateX(0%);
 }
 
-.experiencia.show-true {
+.experiencia-link.show-true {
   transform: translateX(-100%);
 }
 
@@ -262,7 +262,7 @@ h {
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 900px) {
   .app__contact__conten {
     width: 80%;
     height: 80%;
@@ -277,7 +277,7 @@ h {
     padding-top: 1.5rem;
   }
   .app__contact__conten__cards__content {
-    width: 80%;
+    width: 90%;
     height: 80%;
     flex-direction: row;
     justify-content: center;

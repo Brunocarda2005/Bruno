@@ -17,18 +17,21 @@ export function Experiencia() {
               key={Experiencia.id}
               className="experiencia__item__content"
             >
-              <span className="experiencia__item__content__blob"></span>
+              <div className="experiencia__item__content__blob">
+                <span className="experiencia__item__content__blob__span"></span>
+              </div>
               <article className="experiencia__item__content__text">
                 <div className="experiencia__item__content__text__title">
                   <h3 className="experiencia__item__content__text__title__empresa">
-                    {returnEmpresa(Experiencia.empresa)}
+                    {returnEmpresa(Experiencia.empresa)} - {Experiencia.cargo}
                   </h3>
                   <span className="experiencia__item__content__text__title__tiempo">
                     {Experiencia.tiempo}
                   </span>
                 </div>
-                <span>{Experiencia.cargo}</span>
-                <p>{Experiencia.descripcion}</p>
+                <p className="experiencia__item__content__text__title__descripcion">
+                  {Experiencia.descripcion}
+                </p>
               </article>
             </section>
           );

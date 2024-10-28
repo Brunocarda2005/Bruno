@@ -1,15 +1,65 @@
 .experiencia {
-    z-index: 5;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.experiencia__content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 1rem;
+}
+
+.experiencia__item__content__blob {
+  width: 0.8rem;
+  height: 0.8rem;
+  aspect-ratio: 1/1;
+  border-radius: 100rem;
+  background-color: var(--color-secundario);
+  margin-top: 0.2rem;
+  z-index: 6;
+  position: absolute;
+  left: 0;
+  transform: translateX(-14%);
+  outline: 5px solid #171719;
+}
+
+.experiencia__content__line {
+  width: 0.6rem;
+  height: 90%;
+  position: absolute;
+  top: -0.5rem;
+  background-color: var(--color-principal);
+  border-radius: 1rem;
+}
+
+.experiencia__item__content__text {
+  font-size: 0.8em;
+  margin-left: 1.5rem;
 }
 
 .experiencia__item__content__text__title {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
 }
 
 .experiencia__item__content__text__title__empresa {
-    color: var(--color-principal);
+  color: var(--color-principal);
 }
+
 .experiencia__item__content__text__title__tiempo {
-    color: var(--color-terciario);
+  color: var(--color-terciario);
+}
+
+@media (min-width: 860px) {
+  .experiencia__item__content__text__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
