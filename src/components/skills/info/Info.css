@@ -1,0 +1,56 @@
+.title-skills {
+  width: 90%;
+  height: 14em;
+  background-color: var(--color-sexto);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius-med);
+  outline: 1px solid #ffffff04;
+}
+
+.title-skills-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title-skills-content-img {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.content__empresa {
+  display: flex;
+  gap: 1rem;
+}
+.title-skills-content-img-empresa {
+  border-radius: .3rem;
+  width: 3rem;
+}
+
+.title-skills-content-des {
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+  color: var(--color-terciario);
+}
+
+.title-skills-content-level {
+  color: var(--color-secundario);
+  text-transform: uppercase;
+}
+
+@media (min-width: 700px) {
+  .title-skills {
+    width: 60%;
+    margin: 0;
+  }
+
+  .title-skills-content {
+    width: 100%;
+    height: 100%;
+  }
+}
