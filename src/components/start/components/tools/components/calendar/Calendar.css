@@ -1,0 +1,81 @@
+.container__StartTools {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.time__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15%;
+}
+
+.time__content__reloj {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+.time__content__frase {
+  font-size: .7em;
+}
+
+.calendar__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.calendar__content__days,
+.calendar__content__calendar {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.3rem;
+}
+
+.calendar__content__calendar__day,
+.calendar__content__days__day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7em;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 10rem;
+}
+
+.calendar__content__calendar__day {
+  transition: all 0.1s ease-in-out;
+}
+
+.calendar__content__calendar__day:hover {
+  background-color: #ffffff1f;
+  color: var(--color-principal);
+}
+
+.calendar__content__calendar__day:hover.dia_actual_true {
+  background-color: none;
+}
+
+.mes_actual_true {
+  color: var(--color-principal);
+}
+
+.mes_actual_false {
+  color: var(--color-terciario);
+}
+
+.dia_actual_true {
+  color: #000;
+  background-color: var(--color-secundario);
+}
+
+.dia_select_true {
+  outline: 1px solid #ffffff1f;
+  color: var(--color-principal);
+}

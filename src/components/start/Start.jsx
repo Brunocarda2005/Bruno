@@ -1,5 +1,6 @@
 import StartAbout from "./components/about/StartAbout";
 import StartLink from "./components/links/StartLinks";
+import { StartTools } from "./components/tools/StartTools";
 import StartWallpaper from "./components/wallpaper/StartWallpaper";
 import "./Start.css";
 
@@ -35,7 +36,7 @@ export default function Main() {
       </div>
       <section className="main__content-grid">
         <StartAbout />
-        <aside className="main__content-grid__container tools box-shadow"></aside>
+        <StartTools />
         <StartWallpaper />
         <StartLink />
       </section>
