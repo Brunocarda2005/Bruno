@@ -1,14 +1,12 @@
-// import { useEffect, useState, useRef } from "react";
-import { FaGithub } from "react-icons/fa";
-import { FaEnvelope } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import cv from "../../assets/CV INGLES.docx.pdf";
+import StartAbout from "./components/about/StartAbout";
+import StartLink from "./components/links/StartLinks";
+import StartWallpaper from "./components/wallpaper/StartWallpaper";
 import "./Start.css";
 
 export default function Main() {
   return (
     <main className="main" id="home">
-      <section className="main-me">
+      {/* <section className="main-me">
         <div className="main-me-content">
           <aside>
             <h2 className="main-me-content-h">
@@ -31,6 +29,15 @@ export default function Main() {
             <span className="main-me-content-a-text">Dowload CV</span>
           </a>
         </div>
+      </section> */}
+      <div className="blob position-start">
+        <span className="blob-span"></span>
+      </div>
+      <section className="main__content-grid">
+        <StartAbout />
+        <aside className="main__content-grid__container tools box-shadow"></aside>
+        <StartWallpaper />
+        <StartLink />
       </section>
     </main>
   );

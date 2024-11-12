@@ -11,9 +11,6 @@ export default function Main() {
   return (
     <>
       <Header />
-      <div className="blob position-top">
-        <span className="blob-span"></span>
-      </div>
       <Start />
       <UseState>
         <Skills />

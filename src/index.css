@@ -208,3 +208,7 @@ button {
     overflow-y: auto;
   }
 }
+
+.box-shadow {
+  box-shadow: var(--box-shadow);
+}
