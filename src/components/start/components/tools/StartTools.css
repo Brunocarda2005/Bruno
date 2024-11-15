@@ -1,0 +1,15 @@
+.tools {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__content-grid__container__change-content {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .main__content-grid__container__change-content {
+    display: none;
+  }
+}

@@ -1,0 +1,24 @@
+.main__content-grid__container__clima {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__content-grid__container__clima__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main__content-grid__container__clima__content__img {
+  width: 40%;
+}
+
+.main__content-grid__container__clima__content__grado {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--color-principal);
+}
