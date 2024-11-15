@@ -36,5 +36,5 @@
   background-color: var(--color-quinto);
   position: relative;
   overflow: hidden;
-  outline: 1px solid #ffffff05;
+  outline: var(--outline);
 }

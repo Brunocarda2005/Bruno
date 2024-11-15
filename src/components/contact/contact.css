@@ -1,15 +1,9 @@
-span,
-p,
-h {
-  color: var(--color-principal);
-}
-
 .app__contact {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: center;
   margin-top: 5rem;
   position: relative;
 }
@@ -39,7 +33,6 @@ h {
   position: relative;
 }
 
- 
 .app__contact__conten__about__profile {
   width: 100%;
   display: flex;
@@ -88,7 +81,7 @@ h {
     font-size: 0.9em;
   }
   .app__contact__conten__about__aboutText__text {
-    width: 90%;
+    width: 100%;
     font-size: 0.6em;
     margin-top: 0.2rem;
   }
@@ -120,7 +113,7 @@ h {
 
 .app__contact__conten__about__change__content__links__link {
   cursor: pointer;
-  transition: transform .4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 .show-false {
@@ -155,6 +148,7 @@ h {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .app__contact__conten__cards__content {
@@ -221,7 +215,6 @@ h {
   }
 }
 
-
 @media (max-width: 500px) {
   .app__contact__conten__cards__content {
     flex-direction: column;
@@ -237,6 +230,26 @@ h {
   .app__contact__conten__about {
     width: 50%;
   }
+
+  .app__contact__conten__about__aboutText__text {
+    width: 90%;
+    font-size: 0.6em;
+    margin-top: 0.2rem;
+  }
+
+  .app__contact__conten__about__aboutText {
+    width: 95%;
+    .app__contact__conten__about__aboutText__title {
+      color: var(--color-secundario);
+      font-size: 1.2em;
+    }
+    .app__contact__conten__about__aboutText__text {
+      width: 100%;
+      font-size: .8em;
+      margin-top: 0.2rem;
+    }
+  }
+
   .app__contact__conten__cards {
     width: 100%;
     align-items: start;

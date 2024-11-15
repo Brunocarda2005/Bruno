@@ -1,0 +1,36 @@
+.buscador__seeker {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.buscador__seeker__content {
+  width: 60%;
+  position: relative;
+}
+
+.buscador__seeker__content__input {
+  border: none;
+  outline: var(--outline);
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1em;
+  background-color: var(--color-sexto);
+  color: var(--color-principal);
+  border-radius: var(--border-radius-med);
+  padding-left: 2rem;
+}
+
+.buscador__seeker__content__lupa {
+  width: 2rem;
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+.buscador__seeker__content__lupa__img {
+  width: 50%;
+  height: 100%;
+}

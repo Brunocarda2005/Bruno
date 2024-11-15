@@ -23,7 +23,7 @@
 
 .blob.position-center {
   position: absolute;
-  bottom: 0%;
+  bottom: 40%;
   left: 50%;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .blob-span {
-  width: 70vw;
+  width: 90vw;
   height: 100px;
   background-color: var(--color-secundario);
   filter: blur(300px);
@@ -50,5 +50,15 @@
 @media (min-width: 700px) {
   .blob-span {
     filter: blur(350px);
+  }
+
+  .blob.position-center {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+  }
+
+  .blob-span {
+    width: 70vw;
   }
 }

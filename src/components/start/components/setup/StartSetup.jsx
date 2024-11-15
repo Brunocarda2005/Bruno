@@ -1,4 +1,4 @@
-import "./StartWallpaper.css";
+import "./StartSetup.css";
 import setupIMG from "../../../../static/svg/setup.svg";
 // import lightIMG from "../../../../static/svg/light.svg";
 import lampIMG from "../../../../static/svg/lamp.svg";

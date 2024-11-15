@@ -26,17 +26,14 @@ export default function HeaderContact(params) {
         </h5>
         <article className="app__contact__conten__about__aboutText__text">
           <p>
-            Como Desarrollador Web Full Stack especializado en el front-end, he
-            aplicado mis conocimientos técnicos en Cycle Integrated Services,
-            trabajando en soluciones de software completas. La creación de
-            aplicaciones web con tecnologías como Next.js y AngularJS ha sido el
-            núcleo de mi experiencia, asegurando interfaces de usuario
-            optimizadas y back-ends robustos. Nuestra colaboración en equipos
-            multidisciplinarios ha resultado en proyectos que no solo cumplen
-            con los requisitos técnicos, sino que también mejoran la experiencia
-            del usuario. Mi carrera está impulsada por una búsqueda constante de
-            innovación y eficiencia, siempre con el objetivo de desarrollar
-            tecnología que tenga un impacto positivo en la vida de las personas.
+            Como Desarrollador Web Full Stack en Cycle Integrated Services, me
+            especializo en front-end, creando aplicaciones web con Next.js y
+            AngularJS, asegurando interfaces optimizadas y back-ends sólidos. Mi
+            trabajo en equipos multidisciplinarios ha dado como resultado
+            proyectos que mejoran la experiencia del usuario mientras cumplen
+            con altos estándares técnicos. Impulsado por la innovación y la
+            eficiencia, busco desarrollar tecnología que transforme
+            positivamente la vida de las personas.
           </p>
         </article>
       </section>

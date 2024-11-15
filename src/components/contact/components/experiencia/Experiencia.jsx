@@ -30,7 +30,7 @@ export function Experiencia() {
                   </span>
                 </div>
                 <p className="experiencia__item__content__text__title__descripcion">
-                  {Experiencia.descripcion}
+                  {Experiencia.presentacion}
                 </p>
               </article>
             </section>
