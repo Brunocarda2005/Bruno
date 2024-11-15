@@ -1,5 +1,6 @@
 .buscador {
-  padding-top: 5%;
+  padding-top: 15%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
