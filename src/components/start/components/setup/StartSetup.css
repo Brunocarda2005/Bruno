@@ -4,11 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
   position: absolute;
-  top: -10%;
+  top: 0%;
   .light__img {
-    width: 80%;
+    width: 50%;
     height: auto;
     object-fit: cover;
   }
@@ -20,10 +19,27 @@
   display: flex;
   justify-content: center;
   align-items: end;
-  gap: 1rem;
   .setup__img {
-    width: 80%;
+    width: 50%;
     height: auto;
     object-fit: cover;
+  }
+}
+
+.main__content-grid__container__lamp__picture,
+.main__content-grid__container__setup__picture {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 700px) {
+  .main__content-grid__container__lamp__picture,
+  .main__content-grid__container__setup__picture {
+    max-width: 400px;
+  }
+
+  .wallpaper {
+    min-height: 17rem;
   }
 }

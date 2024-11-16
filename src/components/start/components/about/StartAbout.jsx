@@ -11,16 +11,10 @@ export default function StartAbout() {
           Bruno <span className="title_blue">Cardamone</span>
         </h1>
         <p className="main__content-grid__container__about__text">
-          Soy un web Developer con 2 años de experiencia, un fullstack,
-          orientado a front-end, a lo largo de mi carrera investigué de forma
-          autodidacta todas las tecnologías que poseo, haciendo cursos para
-          obtener certificaciones, la historia de mi carrera se puede resumir en
-          pocas palabras, hambre por conocimiento y demostrarme a mí mismo lo
-          que puedo hacer, brindando los mejores servicios a mi alcance. Sé que
-          puedo aportar mucho valor y quiero demostrártelo con mi página y mis
-          proyectos. En mi página podrás ver ejemplos concretos de cómo
-          implemento diseños eficientes, rápidos y orientados al usuario,
-          logrando siempre superar las expectativas.
+          Desarrollador web full-stack con 2 años de experiencia, especializado
+          en front-end. Autodidacta y certificado, me enfoco en crear proyectos
+          eficientes y centrados en el usuario, superando expectativas y
+          aportando valor en cada trabajo.
         </p>
         <div className="main__content-grid__container__about__link">
           <a

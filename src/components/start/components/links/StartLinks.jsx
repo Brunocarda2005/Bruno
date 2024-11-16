@@ -4,7 +4,7 @@ import "./StartLink.css";
 
 export default function StartLink() {
   return (
-    <aside className="main__content-grid__container__hidden">
+    <aside className="main__content-grid__container__hidden links">
       {dataLink.map((link) => {
         return (
           <a

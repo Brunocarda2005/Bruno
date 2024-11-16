@@ -1,14 +1,48 @@
 .tools {
   display: flex;
   flex-direction: column;
+  transition: height 1s ease-in-out;
 }
 
 .main__content-grid__container__change-content {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.8em;
+  padding-top: 0.8rem;
 }
 
-@media (min-width: 768px) {
+.calendario,
+.clima {
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.calendario.show-false {
+  transform: translateX(100%);
+}
+
+.calendario.show-true {
+  transform: translateX(-20%);
+}
+
+.clima.show-false {
+  transform: translateX(20%);
+}
+
+.clima.show-true {
+  transform: translateX(-160%);
+}
+
+.tools__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 700px) {
   .main__content-grid__container__change-content {
     display: none;
   }

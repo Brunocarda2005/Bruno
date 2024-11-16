@@ -1,19 +1,18 @@
 .main__content-grid__container__hidden {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  justify-content: space-between;
+
+  .main__content-grid__container {
+    padding: 0.6rem;
+    font-weight: 500;
     display: flex;
-    flex-direction: column;
-    gap: .3rem;
     justify-content: space-between;
+    align-items: center;
+  }
 
-    .main__content-grid__container {
-        padding: .6rem;
-        font-weight: 500;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .icon {
-        color: var(--color-principal);
-    }
+  .icon {
+    color: var(--color-principal);
+  }
 }
-

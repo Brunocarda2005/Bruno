@@ -19,7 +19,7 @@
   background-color: var(--color-sexto);
   color: var(--color-principal);
   border-radius: var(--border-radius-med);
-  padding-left: 2rem;
+  padding-left: 2.5rem;
 }
 
 .buscador__seeker__content__lupa {

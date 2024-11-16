@@ -7,12 +7,12 @@ export default function StartSetup() {
   return (
     <aside className="main__content-grid__container wallpaper box-shadow">
       <section className="main__content-grid__container__lamp">
-        <picture>
+        <picture className="main__content-grid__container__lamp__picture">
           <img src={lampIMG} alt="lamp light svg" className="light__img" />
         </picture>
       </section>
       <section className="main__content-grid__container__setup">
-        <picture>
+        <picture className="main__content-grid__container__setup__picture">
           <img src={setupIMG} alt="setup svg" className="setup__img" />
         </picture>
       </section>
