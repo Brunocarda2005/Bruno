@@ -1,3 +1,4 @@
+import "./Suggestion.css";
 import Tag from "./tag/Tag";
 
 export default function Suggestions(params) {
@@ -5,19 +6,21 @@ export default function Suggestions(params) {
 
   return (
     <section className="suggestion">
-      {tags.map((tag) =>
-        tag.state ? (
-          <Tag
-            key={tag.id}
-            nombre={tag.nombre}
-            color={tag.color}
-            id={tag.id}
-            click={handleTagClick}
-          />
-        ) : (
-          ""
-        )
-      )}
+      <div className="suggestion__content">
+        {tags.map((tag) =>
+          tag.active ? (
+            <Tag
+              key={tag.id}
+              nombre={tag.nombre}
+              color={tag.color}
+              id={tag.id}
+              click={handleTagClick}
+            />
+          ) : (
+            ""
+          )
+        )}
+      </div>
     </section>
   );
 }

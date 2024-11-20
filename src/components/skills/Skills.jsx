@@ -1,5 +1,5 @@
 import "./Skills.css";
-import { CardData } from "./data/data";
+import { CardData } from "../../static/const/dataSkills";
 import InfoSkill from "./info/Info";
 import SkillsCard from "./skills-card/Skills-card";
 
@@ -14,7 +14,7 @@ export default function Skills() {
               return (
                 <SkillsCard
                   Pattern={data.img}
-                  key={data.key}
+                  key={data.id}
                   des={data.des}
                   stats={data.stats}
                   alt={data.alt}

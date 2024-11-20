@@ -60,13 +60,6 @@
     cursor: pointer;
   }
 
-  .projects-content {
-    width: 70%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 2rem;
-  }
-
   .project_work-card_project_work-cards-card {
     position: relative;
     width: 100%;

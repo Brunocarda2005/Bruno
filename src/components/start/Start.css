@@ -4,13 +4,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0.5rem 0;
 }
 
 .main__content-grid__container {
   width: 100%;
   padding: 0.8rem;
   border-radius: 0.5rem;
-  background-color: var(--color-quinto);
+  background-color: var(--color-sexto);
   position: relative;
   overflow: hidden;
   outline: var(--outline);
@@ -26,11 +27,11 @@
 
 .about {
   grid-row: 1;
-  grid-column: span 4;
+  grid-column: span 5;
 }
 
 .tools {
-  grid-column: span 2;
+  grid-column: span 3;
   grid-row: 2;
 }
 

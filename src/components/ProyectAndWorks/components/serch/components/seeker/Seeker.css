@@ -1,8 +1,8 @@
 .buscador__seeker {
-  width: 70%;
+  width: 90%;
   display: flex;
   justify-content: center;
-  margin-bottom: 30%;
+  margin-bottom: 1.4rem;
 }
 
 .buscador__seeker__content {
@@ -34,4 +34,10 @@
 .buscador__seeker__content__lupa__img {
   width: 50%;
   height: 100%;
+}
+
+@media (min-width: 700px) {
+  .buscador__seeker {
+    width: 50%;
+  }
 }

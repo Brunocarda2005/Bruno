@@ -33,5 +33,7 @@ export const SendDataClima = async (city) => {
   // state climate
   const stateClimate = transforStateClimate(weather);
 
-  return { stateClimate, temperature };
+  const climaString = `${temperature}°`;
+
+  return { stateClimate, climaString };
 };

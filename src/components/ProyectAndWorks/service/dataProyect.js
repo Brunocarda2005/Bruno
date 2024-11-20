@@ -4,35 +4,109 @@ import calculator from "../../../static/fotos/calculator.png";
 import game from "../../../static/fotos/game.png";
 import stats from "../../../static/fotos/stats.png";
 
-export const DataProyect = {
-    Projects: [
+export const DataProyect = [
+  {
+    icon: js,
+    img: game,
+    tags: [
       {
-        icon: js,
-        img: game,
-        tags: [],
-        a: "https://brunocarda2005.github.io/Game-paper-scissors-rock/",
-        key: 2,
+        id: 1,
+        color: "#FFD600",
+        nombre: "Javascript",
+        active: true,
       },
       {
-        icon: js,
-        img: calculator,
-        tags: [],
-        a: "https://brunocarda2005.github.io/calculator/",
-        key: 4,
+        id: 3,
+        color: "#039BE5",
+        nombre: "Css",
+        active: true,
       },
       {
-        icon: js,
-        img: buscador,
-        tags: [],
-        a: "https://brunocarda2005.github.io/frontend-mentor-api-countries/",
-        key: 5,
-      },
-      {
-        icon: js,
-        img: stats,
-        tags: [],
-        a: "https://brunocarda2005.github.io/project-frontend-mentor-2-JSON/",
-        key: 6,
+        id: 5,
+        color: "#f06529",
+        nombre: "Html",
+        active: true,
       },
     ],
-  };
+    a: "https://brunocarda2005.github.io/Game-paper-scissors-rock/",
+    key: 1,
+  },
+  {
+    icon: js,
+    img: calculator,
+    tags: [
+      {
+        id: 1,
+        color: "#FFD600",
+        nombre: "Javascript",
+        active: true,
+      },
+      {
+        id: 3,
+        color: "#039BE5",
+        nombre: "Css",
+        active: true,
+      },
+      {
+        id: 5,
+        color: "#f06529",
+        nombre: "Html",
+        active: true,
+      },
+    ],
+    a: "https://brunocarda2005.github.io/calculator/",
+    key: 2,
+  },
+  {
+    icon: js,
+    img: buscador,
+    tags: [
+      {
+        id: 1,
+        color: "#FFD600",
+        nombre: "Javascript",
+        active: true,
+      },
+      {
+        id: 3,
+        color: "#039BE5",
+        nombre: "Css",
+        active: true,
+      },
+      {
+        id: 5,
+        color: "#f06529",
+        nombre: "Html",
+        active: true,
+      },
+    ],
+    a: "https://brunocarda2005.github.io/frontend-mentor-api-countries/",
+    key: 3,
+  },
+  {
+    icon: js,
+    img: stats,
+    tags: [
+      {
+        id: 1,
+        color: "#FFD600",
+        nombre: "Javascript",
+        active: true,
+      },
+      {
+        id: 3,
+        color: "#039BE5",
+        nombre: "Css",
+        active: true,
+      },
+      {
+        id: 5,
+        color: "#f06529",
+        nombre: "Html",
+        active: true,
+      },
+    ],
+    a: "https://brunocarda2005.github.io/project-frontend-mentor-2-JSON/",
+    key: 4,
+  },
+];

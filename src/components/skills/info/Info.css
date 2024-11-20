@@ -1,11 +1,10 @@
 .title-skills {
   width: 90%;
-  height: 14em;
+  height: 100%;
   background-color: var(--color-sexto);
   padding: 1rem;
-  margin-bottom: 2rem;
   border-radius: var(--border-radius-med);
-  outline: 1px solid #ffffff04;
+  outline: var(--outline);
 }
 
 .title-skills-content {
@@ -45,7 +44,7 @@
 
 @media (min-width: 700px) {
   .title-skills {
-    width: 60%;
+    width: 100%;
     margin: 0;
   }
 

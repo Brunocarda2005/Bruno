@@ -11,9 +11,8 @@ export default function Clima() {
     const fetchData = async () => {
       const data = await SendDataClima("rosario");
       if (data) {
-        console.log(data.stateClimate);
         setStateClimate(data.stateClimate);
-        setTemperature(data.temperature);
+        setTemperature(data.climaString);
       }
     };
     fetchData();
@@ -23,7 +22,7 @@ export default function Clima() {
     <section className="main__content-grid__container__clima">
       <div className="main__content-grid__container__clima__content">
         <span className="main__content-grid__container__clima__content__grado">
-          {temperature}°
+          {temperature}
         </span>
         <img
           src={stateClimate}

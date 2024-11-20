@@ -1,0 +1,20 @@
+.suggestion {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.suggestion__content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (min-width: 700px) {
+  .suggestion {
+    width: 40%;
+    margin-bottom: 1rem;
+  }
+}
