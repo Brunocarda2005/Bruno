@@ -1,8 +1,3 @@
-.project_work-card_project_work-cards-card {
-  width: 100%;
-  max-width: 20rem;
-}
-
 .project_work-card_project_work-cards-card-mark {
   width: 2.6rem;
   height: 4rem;
@@ -48,11 +43,16 @@
   border-radius: 0.2rem;
 }
 
+.section__img__content {
+  display: flex;
+}
+
 .section__img__content__img {
   object-fit: cover;
   width: 100%;
   box-shadow: var(--box-shadow);
   border-radius: 0.4rem;
+  aspect-ratio: 1/0.6;
 }
 
 @media (min-width: 700px) {

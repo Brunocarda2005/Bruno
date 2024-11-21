@@ -1,8 +1,10 @@
 .buscador__seeker {
   width: 90%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-bottom: 1.4rem;
+  position: relative;
 }
 
 .buscador__seeker__content {
@@ -12,7 +14,7 @@
 
 .buscador__seeker__content__input {
   border: none;
-  outline: var(--outline);
+  border: var(--outline);
   width: 100%;
   padding: 0.5rem;
   font-size: 1em;
@@ -20,6 +22,17 @@
   color: var(--color-principal);
   border-radius: var(--border-radius-med);
   padding-left: 2.5rem;
+  outline: none;
+}
+
+.input_active {
+  border-radius: var(--border-radius-med) var(--border-radius-med) 0 0;
+  border-bottom: none;
+}
+
+.input_desactive {
+  border: var(--outline);
+  border-radius: var(--border-radius-med);
 }
 
 .buscador__seeker__content__lupa {
@@ -34,6 +47,47 @@
 .buscador__seeker__content__lupa__img {
   width: 50%;
   height: 100%;
+}
+
+.buscador__seeker__skills {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  background-color: var(--color-sexto);
+  z-index: 6;
+  padding: 1rem 0.4rem;
+  border-radius: 0 0 0.4rem 0.4rem;
+  border: var(--outline);
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.active {
+  height: auto;
+}
+
+.desactive {
+  height: 0px;
+  padding: 0;
+  border: none;
+  display: none;
+}
+
+.buscador__seeker__skills__skill {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem;
+}
+
+.buscador__seeker__skills__skill__span {
+  border-left: 3px solid;
+  margin-right: 1rem;
+}
+
+.buscador__seeker__skills__skill__close {
+  cursor: pointer;
 }
 
 @media (min-width: 700px) {

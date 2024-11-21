@@ -11,6 +11,7 @@ import Tailwind from "../svg/tailwindcss.svg";
 import TypeScript from "../svg/typescript.svg";
 import Net from "../svg/Net.svg";
 import python from "../svg/python.svg";
+import angular from "../svg/angular.svg"
 
 export const CardData = [
   {
@@ -114,6 +115,14 @@ export const CardData = [
     empresa: [],
     id: 14,
     stats: "junior",
+    des: "Al igual que con Node.js la aprendí para poder entender el mundo del backend, no estoy tan familiarizado con esta herramienta, pero sigo usándola de vez en cuando",
+    alt: "MySql bruno cardamone vite github",
+  },
+  {
+    img: angular,
+    empresa: [0],
+    id: 15,
+    stats: "Intermediate",
     des: "Al igual que con Node.js la aprendí para poder entender el mundo del backend, no estoy tan familiarizado con esta herramienta, pero sigo usándola de vez en cuando",
     alt: "MySql bruno cardamone vite github",
   },

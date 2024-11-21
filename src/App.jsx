@@ -1,4 +1,3 @@
-import "./static/css/app.css";
 import Main from "./components/portafolio/Main";
 
 function App() {

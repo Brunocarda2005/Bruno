@@ -46,6 +46,8 @@
   position: absolute;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
+  outline: var(--outline);
+  transform: scale(80%);
 }
 
 .header__nav__content:hover .header__nav__content__card {
@@ -68,21 +70,22 @@
   z-index: 2;
   min-width: 4.8rem;
   box-shadow: var(--box-shadow);
+  transform: scale(100%);
 }
 
 /* tranciciones complejas */
 
 .header__nav__content:hover .header__nav__content__card.skills-link {
   transform: translateY(50%);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 .header__nav__content:hover .header__nav__content__card.projects-link {
   transform: translateY(100%);
-  transition: all 0.6s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .header__nav__content:hover .header__nav__content__card.footer-link {
   transform: translateY(150%);
-  transition: all 0.9s ease-in-out;
+  transition: all 0.75s ease-in-out;
 }
