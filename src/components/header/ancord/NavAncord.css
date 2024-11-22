@@ -73,6 +73,20 @@
   transform: scale(100%);
 }
 
+.footer-link {
+  padding: 0;
+}
+
+.footer-link .header__nav__content__card__img-content {
+  width: 100%;
+  position: absolute;
+  bottom: -53%;
+  display: inline-block;
+  img {
+    width: 100%;
+  }
+}
+
 /* tranciciones complejas */
 
 .header__nav__content:hover .header__nav__content__card.skills-link {
@@ -85,7 +99,12 @@
   transition: all 0.5s ease-in-out;
 }
 
-.header__nav__content:hover .header__nav__content__card.footer-link {
+.header__nav__content:hover .header__nav__content__card.contact-link {
   transform: translateY(150%);
+  transition: all 0.75s ease-in-out;
+}
+
+.header__nav__content:hover .header__nav__content__card.footer-link {
+  transform: translateY(200%);
   transition: all 0.75s ease-in-out;
 }

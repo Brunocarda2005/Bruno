@@ -33,7 +33,7 @@ const dataLink = [
     link: "#footer",
     text: "Footer",
     id: "005-005-5",
-    icone: contact
+    icone: null
   },
 ];
 

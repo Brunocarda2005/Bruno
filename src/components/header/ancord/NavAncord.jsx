@@ -1,7 +1,8 @@
 import Home from "../../../static/svg/home2.svg";
 import Skills from "../../../static/svg/skills.svg";
 import Projects from "../../../static/svg/portofolio.svg";
-import footer from "../../../static/svg/Mailsvg.svg";
+import contact from "../../../static/svg/Mailsvg.svg";
+import footer from "../../../static/svg/wave_link.svg";
 import "./NavAncord.css";
 
 export default function Nav() {
@@ -17,7 +18,10 @@ export default function Nav() {
           />
         </picture>
       </a>
-      <a href="#skills" className="header__nav__content__card false skills-link">
+      <a
+        href="#skills"
+        className="header__nav__content__card false skills-link"
+      >
         <picture className="header__nav__content__card__img-content">
           <img
             className="header__nav__content__card__img-content__img"
@@ -26,7 +30,10 @@ export default function Nav() {
           />
         </picture>
       </a>
-      <a href="#projects" className="header__nav__content__card false projects-link">
+      <a
+        href="#projects"
+        className="header__nav__content__card false projects-link"
+      >
         <picture className="header__nav__content__card__img-content">
           <img
             className="header__nav__content__card__img-content__img"
@@ -35,7 +42,22 @@ export default function Nav() {
           />
         </picture>
       </a>
-      <a href="#contact" className="header__nav__content__card false footer-link">
+      <a
+        href="#contact"
+        className="header__nav__content__card false contact-link"
+      >
+        <picture className="header__nav__content__card__img-content">
+          <img
+            className="header__nav__content__card__img-content__img contact_link-img"
+            src={contact}
+            alt=""
+          />
+        </picture>
+      </a>
+      <a
+        href="#footer"
+        className="header__nav__content__card false footer-link"
+      >
         <picture className="header__nav__content__card__img-content">
           <img
             className="header__nav__content__card__img-content__img footer_link-img"

@@ -1,6 +1,7 @@
 import "./StartLink.css";
 import { FiExternalLink } from "react-icons/fi";
 import dataLink from "../../../../static/const/DataLinks";
+import wave from "../../../../static/svg/wave-start.svg";
 import { useEffect, useState } from "react";
 
 export default function StartLink() {
@@ -72,6 +73,7 @@ export default function StartLink() {
           href={link.link}
         >
           {renderLinkContent(link)}
+          <img src={wave} alt="" className="img__wave__link__start" />
         </a>
       ))}
     </aside>
