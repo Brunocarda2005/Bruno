@@ -1,9 +1,25 @@
+import UseProyect from "../../hooks/UseProyect";
+import UseSuggestions from "../../hooks/UseSuggestions";
 import "./Card.css";
 
 export default function Card(params) {
-  const { icon, img } = params;
+  const { data } = params;
+  const { saveTags } = UseSuggestions();
+  const { saveProject } = UseProyect();
+  const { icon, img, tags } = data;
+
+  const selectProyect = () => {
+    saveTags(tags);
+    saveProject(data);
+  };
+
   return (
-    <main className="project_work-card_project_work-cards-card card">
+    <main
+      className="project_work-card_project_work-cards-card card"
+      onClick={() => {
+        selectProyect();
+      }}
+    >
       <section className="section__img">
         <div className="project_work-card_project_work-cards-card-mark">
           <span></span>

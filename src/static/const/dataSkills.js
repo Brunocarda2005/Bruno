@@ -11,7 +11,7 @@ import Tailwind from "../svg/tailwindcss.svg";
 import TypeScript from "../svg/typescript.svg";
 import Net from "../svg/Net.svg";
 import python from "../svg/python.svg";
-import angular from "../svg/angular.svg"
+import angular from "../svg/angular.svg";
 
 export const CardData = [
   {
@@ -19,7 +19,7 @@ export const CardData = [
     empresa: [0, 1],
     id: 1,
     stats: "Intermediate",
-    des: "Esta fue una de las primeras herramientas que aprendí, tengo 2 años que llevo aprendiendo este lenguaje, es mi lenguaje favorito sin duda",
+    des: "Mi recorrido con JavaScript ha estado lleno de aprendizajes clave, pero lo que más destaco es la creación de juegos. Este proceso no solo me ayudó a desarrollar una lógica más sólida, sino que también me permitió profundizar en conceptos esenciales como el manejo de eventos, promesas y la interacción con APIs. A través de estos proyectos, logré conectar teoría con práctica de manera significativa, consolidando mi habilidad para resolver problemas y optimizar código.",
     alt: "javascript bruno cardamone vite github",
   },
   {
@@ -27,7 +27,7 @@ export const CardData = [
     empresa: [0],
     id: 2,
     stats: "junior",
-    des: "Hace muy poco comencé a aprender este lenguaje, aunque complejo me resuelve muchos problemas a la larga gracias a su tipado fuerte, la verdad que mi opinión del lenguaje es muy buena aunque le falte un poquito de desarrollo.",
+    des: "Mi experiencia con TypeScript ha sido transformadora, especialmente en el descubrimiento de la programación súper tipada. Este enfoque me permitió explorar a fondo el uso de enums e interfaces, herramientas clave para estructurar y tipar mejor mi código. Gracias a ellas, logré escribir aplicaciones más seguras, mantenibles y claras, lo que elevó significativamente la calidad de mis proyectos y mi entendimiento de la robustez que aporta TypeScript al desarrollo.",
     alt: "TypeScript bruno cardamone vite github",
   },
   {
@@ -35,7 +35,7 @@ export const CardData = [
     empresa: [0, 1],
     id: 3,
     stats: "Advanced",
-    des: "Sin dudas esta es mi herramienta favorita del frontend, creo que crear cosas en CSS es casi terapéutico para mí.",
+    des: "Lo mejor de mi recorrido con CSS ha sido aprender a crear estilos de forma original, dando vida a proyectos visualmente atractivos y funcionales. Además, dominar el diseño responsive me permitió asegurar que las interfaces se adapten perfectamente a cualquier dispositivo. También descubrí habilidades interesantes como la implementación de variables dinámicas con JavaScript y el manejo avanzado de media queries, lo que me ayudó a llevar mis proyectos a otro nivel de personalización y adaptabilidad.",
     alt: "css bruno cardamone vite github",
   },
   {
@@ -43,7 +43,7 @@ export const CardData = [
     empresa: [0],
     id: 4,
     stats: "intermediate",
-    des: "Hace casi un año comencé a practicar con React, la cantidad de herramientas que te otorga es increíble, sumado a su baja curva de aprendizaje hace que sea de lo más cómodo para trabajar.",
+    des: "Lo mejor de mi experiencia con React fue descubrir esta poderosa librería y sumergirme en su enfoque innovador. Me enamoré de la manera en que React gestiona los estados y los contextos, permitiendo un control preciso y eficiente de los datos en las aplicaciones. Además, la programación reactiva transformó mi perspectiva, ofreciéndome una forma fluida y dinámica de desarrollar interfaces interactivas que responden en tiempo real a los cambios del usuario.",
     alt: "react bruno cardamone vite github",
   },
   {
@@ -51,7 +51,7 @@ export const CardData = [
     empresa: [0, 1],
     id: 5,
     stats: "Advanced",
-    des: "Por supuesto que esta fue la herramienta que aprendí para poder programar en la web, que se puede decir, padre de toda la web, simplemente HTML.",
+    des: "Lo mejor de mi experiencia con HTML fue aprender a estructurar el contenido de forma clara y semántica, utilizando las etiquetas adecuadas para cada propósito. Este enfoque no solo mejoró la accesibilidad y el SEO de mis proyectos, sino que también sentó bases sólidas para desarrollar aplicaciones bien organizadas y fáciles de mantener. HTML me permitió comprender la importancia de una estructura correcta como el pilar fundamental de cualquier proyecto web exitoso.",
     alt: "html bruno cardamone vite github",
   },
   {
@@ -59,7 +59,7 @@ export const CardData = [
     empresa: [0],
     id: 6,
     stats: "junior",
-    des: "Es la más nueva de todas las herramientas que estoy aprendiendo",
+    des: "Lo mejor de mi experiencia con Next.js fue descubrir la paginación y su estructura definida, lo que transformó mi forma de abordar los proyectos. Aprendí la importancia de una buena organización, algo que antes solía pasar por alto, ya que mis proyectos tenían estructuras menos optimizadas. Next.js me enseñó cómo una arquitectura bien pensada puede marcar la diferencia en la escalabilidad y el mantenimiento de las aplicaciones.",
     alt: "NextJs bruno cardamone vite github",
   },
   {
@@ -67,7 +67,7 @@ export const CardData = [
     empresa: [],
     id: 7,
     stats: "junior",
-    des: "Quise hacer que los componentes fueran únicos y no dependan de nada como un CSS por lo que explore esta herramienta, si bien CSS es genial también es interesante explorar esta forma.",
+    des: "Lo mejor de mi experiencia con Tailwind fue descubrir una forma rápida y eficiente de estilizar proyectos. Me encantó la flexibilidad que ofrece para personalizar diseños directamente en las clases, lo que eliminó la necesidad de escribir estilos adicionales. Esto no solo mejoró mi productividad, sino que también me permitió mantener un código más limpio y organizado en cada proyecto.",
     alt: "Tailwind bruno cardamone vite github",
   },
   {
@@ -75,7 +75,7 @@ export const CardData = [
     empresa: [0, 1],
     id: 8,
     stats: "intermediate",
-    des: "Esta es una de las herramientas que más uso, hace casi dos años comencé aprenderla y la uso constantemente para darle una vuelta a muchos estilos.",
+    des: "Figma fue un descubrimiento excelente en mi camino como diseñador, ya que me permitió crear mis proyectos de manera muy eficiente y con una estructura clara a seguir. La herramienta me ayudó a visualizar de forma precisa el diseño de las interfaces, lo que facilitó el proceso de desarrollo. Además, pude crear mis propios íconos cuando los necesitaba, lo que me dio aún más control y flexibilidad para personalizar cada proyecto según mis necesidades.",
     alt: "figma bruno cardamone vite github",
   },
   {
@@ -107,23 +107,23 @@ export const CardData = [
     empresa: [0],
     id: 13,
     stats: "junior",
-    des: "Al igual que con Node.js la aprendí para poder entender el mundo del backend, no estoy tan familiarizado con esta herramienta, pero sigo usándola de vez en cuando",
-    alt: "MySql bruno cardamone vite github",
+    des: "Aprendí .NET hace poco, específicamente para trabajar en mi primer empleo. Fue una experiencia bastante positiva, ya que me resultó muy fácil de entender, especialmente por el gran apoyo y la guía de mis compañeros de trabajo. Gracias a su ayuda, pude adaptarme rápidamente y comenzar a desarrollar proyectos en .NET con confianza.",
+    alt: ".Net bruno cardamone vite github",
   },
   {
     img: python,
     empresa: [],
     id: 14,
     stats: "junior",
-    des: "Al igual que con Node.js la aprendí para poder entender el mundo del backend, no estoy tan familiarizado con esta herramienta, pero sigo usándola de vez en cuando",
-    alt: "MySql bruno cardamone vite github",
+    des: "Aprendí Python en la universidad, y fue una de las herramientas más útiles para practicar y fortalecer mi lógica. Los ejercicios que nos asignaron fueron fundamentales para mejorar mi capacidad de resolver problemas de manera estructurada y eficiente. Algo a destacar es que Python, con su sintaxis sencilla y clara, facilitó muchísimo el proceso de aprender a pensar de forma lógica y algoritmica, lo que me permitió enfrentar desafíos más complejos con confianza.",
+    alt: "python bruno cardamone vite github",
   },
   {
     img: angular,
     empresa: [0],
     id: 15,
     stats: "Intermediate",
-    des: "Al igual que con Node.js la aprendí para poder entender el mundo del backend, no estoy tan familiarizado con esta herramienta, pero sigo usándola de vez en cuando",
-    alt: "MySql bruno cardamone vite github",
+    des: "Angular es una de mis herramientas principales, y la encuentro súper interesante, especialmente gracias a su capacidad de lazy loading, que optimiza el rendimiento de las aplicaciones cargando solo lo necesario en cada momento. Además, crear formularios en Angular es muy satisfactorio, ya que me permite gestionar los datos de forma limpia y eficiente. Sin duda, es una herramienta muy poderosa que facilita el desarrollo de aplicaciones web robustas y escalables.",
+    alt: "angular bruno cardamone vite github",
   },
 ];

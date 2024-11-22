@@ -20,6 +20,11 @@
   max-width: 20rem;
 }
 
+.details {
+  grid-row: -1/1;
+  grid-column: -1/1;
+}
+
 @media (min-width: 360px) {
   .projects-content__cards {
     grid-template-columns: 1fr 1fr 1fr;

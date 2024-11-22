@@ -42,7 +42,7 @@
   text-transform: uppercase;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 900px) {
   .title-skills {
     width: 100%;
     margin: 0;

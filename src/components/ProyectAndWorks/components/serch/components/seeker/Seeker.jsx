@@ -1,12 +1,12 @@
 import { useRef, useState, useEffect } from "react";
 import "./Seeker.css";
 import lupaIMG from "../../../../../../static/svg/lupa.svg";
-import UseSuggestions from "../../hooks/UseSuggestions";
+import UseSuggestions from "../../../../hooks/UseSuggestions";
 import { FaPlus } from "react-icons/fa";
 
 export function Seeker(params) {
   const { handleTagClickAc } = params;
-  const { suggestionsActive } = UseSuggestions();
+  const { contextTags } = UseSuggestions();
   const [activeInput, setActiveInput] = useState(false);
   const seekerRef = useRef(null); // Referencia al contenedor principal
 
@@ -47,7 +47,7 @@ export function Seeker(params) {
           activeInput ? "active" : "desactive"
         }`}
       >
-        {suggestionsActive.map((skill) => {
+        {contextTags.map((skill) => {
           const { nombre, id, color } = skill;
 
           const style = {

@@ -1,37 +1,31 @@
-import { useEffect } from "react";
+import UseSuggestions from "../../hooks/UseSuggestions";
 import "./Serch.css";
 import { Seeker } from "./components/seeker/Seeker";
-import Suggestions from "./components/suggestion/suggestion";
-import UseSuggestions from "./hooks/UseSuggestions";
+import Suggestions from "./components/suggestion/Suggestion";
 
-export default function Serch(params) {
-  const { tags, setTags } = params;
-  const { suggestionsActive } = UseSuggestions();
-
-  useEffect(() => {
-    setTags(suggestionsActive);
-  }, [suggestionsActive]);
+export default function Serch() {
+  const { saveTags, contextTags } = UseSuggestions();
 
   const changeActive = (id, boolean) => {
-    setTags((prevTags) =>
-      prevTags.map((tag) => (tag.id === id ? { ...tag, active: boolean } : tag))
+    saveTags(
+      contextTags.map((tag) =>
+        tag.id === id ? { ...tag, active: boolean } : tag
+      )
     );
   };
 
   const handleTagClickDes = (id) => {
     changeActive(id, false);
-    console.log(id);
   };
 
   const handleTagClickAc = (id) => {
     changeActive(id, true);
-    console.log(id);
   };
 
   return (
     <main className="buscador">
       <Seeker handleTagClickAc={handleTagClickAc} />
-      <Suggestions tags={tags} handleTagClick={handleTagClickDes} />
+      <Suggestions handleTagClick={handleTagClickDes} />
     </main>
   );
 }

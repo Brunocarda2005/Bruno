@@ -1,13 +1,23 @@
+import { useEffect } from "react";
+import UseSuggestions from "../../../../hooks/UseSuggestions";
 import "./Suggestion.css";
 import Tag from "./tag/Tag";
 
 export default function Suggestions(params) {
-  const { tags, handleTagClick } = params;
+  const { contextTags, defaultSuggestions } = UseSuggestions();
+  const { handleTagClick } = params;
+
+  // Llama a defaultSuggestions solo si suggestionsActive está vacío
+  useEffect(() => {
+    if (contextTags.length === 0) {
+      defaultSuggestions();
+    }
+  }, []);
 
   return (
     <section className="suggestion">
       <div className="suggestion__content">
-        {tags.map((tag) =>
+        {contextTags.map((tag) =>
           tag.active ? (
             <Tag
               key={tag.id}
@@ -16,9 +26,7 @@ export default function Suggestions(params) {
               id={tag.id}
               click={handleTagClick}
             />
-          ) : (
-            ""
-          )
+          ) : null
         )}
       </div>
     </section>

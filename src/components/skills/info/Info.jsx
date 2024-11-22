@@ -9,14 +9,14 @@ export default function InfoSkill() {
   const EMPRESAS = [Cycle, ArWeb];
 
   const empresasByState = () => {
-    const empresa = StateGlobal.empresa || [];
+    const empresa = StateGlobal.skills.empresa || [];
     if (empresa.length > 1) {
       return empresa.map((data, index) => {
         return (
           <img
             className="title-skills-content-img-empresa"
             src={EMPRESAS[data]}
-            alt={StateGlobal.alt}
+            alt={StateGlobal.skills.alt}
             key={index}
           />
         );
@@ -29,7 +29,7 @@ export default function InfoSkill() {
         <img
           className="title-skills-content-img-empresa"
           src={empresaIMG}
-          alt={StateGlobal.alt}
+          alt={StateGlobal.skills.alt}
         />
       );
     } else {
@@ -45,13 +45,15 @@ export default function InfoSkill() {
           <picture>
             <img
               className="title-skills-content-img-empresa"
-              src={StateGlobal.img}
-              alt={StateGlobal.alt}
+              src={StateGlobal.skills.img}
+              alt={StateGlobal.skills.alt}
             />
           </picture>
         </div>
-        <p className="title-skills-content-des">{StateGlobal.des}</p>
-        <h4 className="title-skills-content-level">{StateGlobal.level}</h4>
+        <p className="title-skills-content-des">{StateGlobal.skills.des}</p>
+        <h4 className="title-skills-content-level">
+          {StateGlobal.skills.level}
+        </h4>
       </section>
     </main>
   );

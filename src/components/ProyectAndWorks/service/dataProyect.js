@@ -36,8 +36,13 @@ export const DataProyect = [
         active: true,
       },
     ],
-    a: "https://www.rpa.cycle.net.co",
     key: 8,
+    detail: {
+      titulo: "Cycle RPA",
+      descripcion:
+        "Cycle RPA es una empresa orientada a la automatización de servicios y herramientas, en ella trabaje durante un año como desarrollador Fullstack, mis logros que son más destacables fueron modularizar el css a través de variables, clases predefinidas que simplificaban los estilos según la necesidad, reestructurar el type de la mayoría de las variables, enums, interfaces y diversos modelos aplicando un tipado más extremo aprovechando las ventajas de TypeScript y simplificar la forma de consumir las API mejorando la eficiencia.",
+      a: "https://www.rpa.cycle.net.co",
+    },
   },
   {
     icon: next,
@@ -56,8 +61,13 @@ export const DataProyect = [
         active: true,
       },
     ],
-    a: "https://testmeli.onrender.com/",
     key: 7,
+    detail: {
+      titulo: "Copia Windows",
+      descripcion:
+        "Este proyecto significó mucho para mí porque fue él inició de un proyecto grande donde poder demostrar mis habilidades, es una copia de Windows 11, donde implemente varias funcionalidades aplicando lógica de programación, además comencé a estructurar de mejor manera mis proyectos aprendí sobre la modularización del código, los problemas que resolví fueron la eficiencia del código el manejo adecuado de los estados, la creación de lógica compleja gracias al juego implementado, aprendí sobre estilos y la importancia de variables y puse en práctica todos los conocimientos previos sobre React.",
+      a: "https://testmeli.onrender.com/",
+    },
   },
   {
     icon: sqlServer,
@@ -76,8 +86,14 @@ export const DataProyect = [
         active: true,
       },
     ],
-    a: "https://testmeli.onrender.com/",
+
     key: 6,
+    detail: {
+      titulo: "Test Mercado Libre",
+      descripcion:
+        "Esta es la prueba técnica que realice para Mercado Libre, en ella realice una API que guarda registro de Personas y de Mutantes (personas con un ADN característico), a la hora de obtener la información de la base de datos nos devuelve la cantidad de personas y la cantidad de mutantes, además de un ratio entre ellas, destaco principalmente la lógica de reconocimiento de ADN aplicando lógica algebraica de matrices y la modularización del código, la API es sencilla pero eficaz.",
+      a: "https://testmeli.onrender.com/",
+    },
   },
   {
     icon: React,
@@ -108,8 +124,14 @@ export const DataProyect = [
         active: true,
       },
     ],
-    a: "https://ecommerce-frontend-alpha-eight.vercel.app/",
+
     key: 5,
+    detail: {
+      titulo: "Test ARWeb",
+      descripcion:
+        "Esta es la prueba técnica que realicé junto a mis compañeros para ARWeb. Es un Ecommers simple, destaco el trabajo en grupo, y la forma en que se modifican los productos utilizando lógica de listas.",
+      a: "https://ecommerce-frontend-alpha-eight.vercel.app/",
+    },
   },
   {
     icon: js,
@@ -134,8 +156,13 @@ export const DataProyect = [
         active: true,
       },
     ],
-    a: "https://brunocarda2005.github.io/Game-paper-scissors-rock/",
     key: 1,
+    detail: {
+      titulo: "Pidra Papel o Tijera",
+      descripcion:
+        "Es un juego simple donde al principio de mi trayectoria puse en práctica mis conocimientos de JavaScript. Destaco la lógica del juego y el código simple.",
+      a: "https://brunocarda2005.github.io/Game-paper-scissors-rock/",
+    },
   },
   {
     icon: js,
@@ -160,8 +187,13 @@ export const DataProyect = [
         active: true,
       },
     ],
-    a: "https://brunocarda2005.github.io/calculator/",
     key: 2,
+    detail: {
+      titulo: "Calculadora",
+      descripcion:
+        "Fue una de las primeras aplicaciones que realicé, me parece una forma muy buena de mejorar la lógica en JavaScript y entrenar tu forma de ver los proyectos como tareas simples a resolver, de manera que en su conjunto logres realizar tareas mucho más grandes.",
+      a: "https://brunocarda2005.github.io/calculator/",
+    },
   },
   {
     icon: js,
@@ -186,8 +218,14 @@ export const DataProyect = [
         active: true,
       },
     ],
-    a: "https://brunocarda2005.github.io/frontend-mentor-api-countries/",
+
     key: 3,
+    detail: {
+      titulo: "Search country",
+      descripcion:
+        "Esta aplicación fue muy interesante para entender la forma en la que se consumen las API de manera real. Destaco la forma en consumir la API, ya que el proyecto se basa en ello, me gustó mucho como parte de mis proyectos iniciales y aprendí bastante en el proceso.",
+      a: "https://brunocarda2005.github.io/frontend-mentor-api-countries/",
+    },
   },
   {
     icon: js,
@@ -212,7 +250,13 @@ export const DataProyect = [
         active: true,
       },
     ],
-    a: "https://brunocarda2005.github.io/project-frontend-mentor-2-JSON/",
+
     key: 4,
+    detail: {
+      titulo: "Aplicacion de Estadisticas",
+      descripcion:
+        "Esta es una aplicación muy interesante donde combiné mis conocimientos de estilos con los conocimientos en JavaScript. Es una aplicación simple, pero creo que tiene un estilo muy bonito donde se le aplica una lógica simple y estática para realizar los cambios necesarios.",
+      a: "https://brunocarda2005.github.io/project-frontend-mentor-2-JSON/",
+    },
   },
 ];

@@ -7,13 +7,16 @@ export default function SkillsCard(params) {
   const { setStateGlobal } = useContext(Context);
 
   const SaveData = () => {
-    setStateGlobal({
-      des: des,
-      level: stats,
-      img: Pattern,
-      alt: alt,
-      empresa: empresa,
-    });
+    setStateGlobal((lastData) => ({
+      ...lastData,
+      skills: {
+        des: des,
+        level: stats,
+        img: Pattern,
+        alt: alt,
+        empresa: empresa,
+      },
+    }));
   };
 
   return (
