@@ -1,5 +1,5 @@
 import "./Info.css";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Context from "../../../context/Context";
 import Cycle from "../../../static/fotos/cycle.jpg";
 import ArWeb from "../../../static/fotos/arwebstudio_logo.jpg";
@@ -7,6 +7,10 @@ import ArWeb from "../../../static/fotos/arwebstudio_logo.jpg";
 export default function InfoSkill() {
   const { StateGlobal } = useContext(Context);
   const EMPRESAS = [Cycle, ArWeb];
+
+  useEffect(() => {
+    console.log(StateGlobal.skills);
+  }, [StateGlobal.skills]);
 
   const empresasByState = () => {
     const empresa = StateGlobal.skills.empresa || [];
