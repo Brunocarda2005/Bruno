@@ -78,6 +78,11 @@
   color: var(--color-principal);
 }
 
+.mes_actual_false.dia_actual_true {
+  color: var(--color-terciario);
+  background: none;
+}
+
 @media (min-width: 700px) {
   .container__StartTools {
     height: auto;

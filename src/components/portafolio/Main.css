@@ -34,8 +34,8 @@
 }
 
 .blob-span {
-  width: 90vw;
-  height: 100px;
+  width: 70vw;
+  height: 70px;
   background-color: var(--color-secundario);
   filter: blur(300px);
   border-radius: 50%;

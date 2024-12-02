@@ -13,8 +13,8 @@ export default function Main() {
       <Header />
       <Start />
       <UseState>
-        <Skills />
         <ProyectsAndWorks />
+        <Skills />
       </UseState>
       <Contact />
       <Footer />
