@@ -11,6 +11,7 @@ import window from "../../../static/fotos/window.png";
 import next from "../../../static/svg/next-js.svg";
 import cycle from "../../../static/fotos/cycleWeb.jpg";
 import angular from "../../../static/svg/angular.svg";
+import TaskManager from "../../../static/fotos/TaskManager.png";
 
 export const DataProyect = [
   {
@@ -42,6 +43,49 @@ export const DataProyect = [
       descripcion:
         "Cycle RPA es una empresa orientada a la automatización de servicios y herramientas, en ella trabaje durante un año como desarrollador Fullstack, mis logros que son más destacables fueron modularizar el css a través de variables, clases predefinidas que simplificaban los estilos según la necesidad, reestructurar el type de la mayoría de las variables, enums, interfaces y diversos modelos aplicando un tipado más extremo aprovechando las ventajas de TypeScript y simplificar la forma de consumir las API mejorando la eficiencia.",
       a: "https://www.rpa.cycle.net.co",
+    },
+  },
+  {
+    icon: React,
+    img: TaskManager,
+    tags: [
+      {
+        id: 1,
+        color: "#FFD600",
+        nombre: "Javascript",
+        active: true,
+      },
+      {
+        id: 4,
+        color: "#61dbfb",
+        nombre: "React",
+        active: true,
+      },
+      {
+        id: 11,
+        color: "#4CAF50",
+        nombre: "NodeJs",
+        active: true,
+      },
+      {
+        id: 17,
+        color: "#689F38",
+        nombre: "MongoDB",
+        active: true,
+      },
+      {
+        id: 18,
+        color: "#e7e7e7",
+        nombre: "Express",
+        active: true,
+      },
+    ],
+    key: 9,
+    detail: {
+      titulo: "Task Manager",
+      descripcion:
+        "Esta fue una aplicación que realicé para una prueba tecnica de Coally, es un administrador de tareas, donde se pueden crear, editar, eliminar y marcar como completadas, destaco la lógica de la aplicación, la forma en que se consume la API y la forma en que se manejan los estados de la aplicación.",
+      a: "https://test-n69ef1qwl-brunocarda2005s-projects.vercel.app",
     },
   },
   {

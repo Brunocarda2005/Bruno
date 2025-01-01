@@ -12,6 +12,8 @@ import TypeScript from "../svg/typescript.svg";
 import Net from "../svg/Net.svg";
 import python from "../svg/python.svg";
 import angular from "../svg/angular.svg";
+import express from "../svg/express.svg";
+import mongodb from "../svg/mongodb.svg";
 
 export const CardData = [
   {
@@ -122,6 +124,24 @@ export const CardData = [
     img: angular,
     empresa: [0],
     id: 15,
+    stats: "Intermediate",
+    des: "Angular es una de mis herramientas principales, y la encuentro súper interesante, especialmente gracias a su capacidad de lazy loading, que optimiza el rendimiento de las aplicaciones cargando solo lo necesario en cada momento. Además, crear formularios en Angular es muy satisfactorio, ya que me permite gestionar los datos de forma limpia y eficiente. Sin duda, es una herramienta muy poderosa que facilita el desarrollo de aplicaciones web robustas y escalables.",
+    alt: "angular bruno cardamone vite github",
+  },
+  {
+    img: mongodb,
+    id: 17,
+    empresa: [],
+    nombre: "MongoDB",
+    stats: "Intermediate",
+    des: "Angular es una de mis herramientas principales, y la encuentro súper interesante, especialmente gracias a su capacidad de lazy loading, que optimiza el rendimiento de las aplicaciones cargando solo lo necesario en cada momento. Además, crear formularios en Angular es muy satisfactorio, ya que me permite gestionar los datos de forma limpia y eficiente. Sin duda, es una herramienta muy poderosa que facilita el desarrollo de aplicaciones web robustas y escalables.",
+    alt: "angular bruno cardamone vite github",
+  },
+  {
+    img: express,
+    id: 18,
+    empresa: [],
+    nombre: "Express",
     stats: "Intermediate",
     des: "Angular es una de mis herramientas principales, y la encuentro súper interesante, especialmente gracias a su capacidad de lazy loading, que optimiza el rendimiento de las aplicaciones cargando solo lo necesario en cada momento. Además, crear formularios en Angular es muy satisfactorio, ya que me permite gestionar los datos de forma limpia y eficiente. Sin duda, es una herramienta muy poderosa que facilita el desarrollo de aplicaciones web robustas y escalables.",
     alt: "angular bruno cardamone vite github",
