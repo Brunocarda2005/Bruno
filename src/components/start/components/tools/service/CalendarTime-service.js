@@ -144,7 +144,7 @@ export const generadorCalendario = (year, mes) => {
     31,
   ];
 
-  const primerDia = new Date(year, mes - 1, 1);
+  const primerDia = new Date(year, mes, 1);
   const primerDiaSemanal = primerDia.getDay();
   const primerDiaSemanalFormat = IsDomingo(primerDiaSemanal);
   const numberUltimoDia = diasMes[mes - 1];
@@ -155,7 +155,7 @@ export const generadorCalendario = (year, mes) => {
 
     if (i < primerDiaSemanalFormat - 1) {
       const RestoMesAnterior = primerDiaSemanalFormat - i - 2;
-      const CantDiaMesAnt = diasMes[mes - 2];
+      const CantDiaMesAnt = mes === 1 ? diasMes[11] : diasMes[mes - 2];
       DiasMesActual.push(CantDiaMesAnt - RestoMesAnterior);
     } else if (i >= primerDiaSemanalFormat && dia < diasMes[mes - 1]) {
       DiasMesActual.push(dia + 1);

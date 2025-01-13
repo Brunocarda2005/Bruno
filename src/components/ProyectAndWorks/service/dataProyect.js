@@ -304,3 +304,19 @@ export const DataProyect = [
     },
   },
 ];
+
+
+let cabrasMuertas = 0
+let cabrasVivas = 0
+let hpCabra = 100
+
+function stateCabras() {
+  if (hpCabra > 0) {
+    cabrasVivas += 1
+  } else {
+    cabrasMuertas -= 1
+  }
+}
+
+
+setInterval(() => stateCabras(), 1000)
