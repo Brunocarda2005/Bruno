@@ -6,12 +6,9 @@ import Card from "./card/Card";
 import { useState } from "react";
 
 export default function CardSocial() {
-  const [nav, setNav] = useState("linkedin")
+  const [nav, setNav] = useState("linkedin");
 
-  const Navigation = (e) => {
-    setNav(e.target.id)
-    console.log()
-  }
+  const Navigation = (e) => setNav(e.target.id);
 
   return (
     <section className="social__cards" id={`${nav}_madre`}>

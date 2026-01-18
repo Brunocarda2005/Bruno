@@ -3,17 +3,25 @@ import "./Calendar.css";
 import {
   generadorCalendario,
   getDateTimeConstants,
-  DIA_SEMANAL,
+  getCalendarTranslations,
 } from "../../service/CalendarTime-service";
+import { useTranslation } from "../../../../../../utils/useTranslation";
 
 export default function Calendar() {
   const [DiaSelectNumber, setDiaSelectNumber] = useState(-1);
+  const { language } = useTranslation();
 
-  const [currentTime, setCurrentTime] = useState(getDateTimeConstants());
+  const [currentTime, setCurrentTime] = useState(
+    getDateTimeConstants(language),
+  );
 
   // Sincroniza el tiempo actual, ejecutándose en cada minuto exacto
   useEffect(() => {
-    const updateCurrentTime = () => setCurrentTime(getDateTimeConstants());
+    // Actualiza inmediatamente cuando cambia el idioma
+    setCurrentTime(getDateTimeConstants(language));
+
+    const updateCurrentTime = () =>
+      setCurrentTime(getDateTimeConstants(language));
 
     // Calcula el tiempo hasta el siguiente minuto exacto
     const now = new Date();
@@ -22,13 +30,17 @@ export default function Calendar() {
     // Ejecuta la función de actualización en el siguiente minuto exacto
     const timeoutId = setTimeout(() => {
       updateCurrentTime();
-      setInterval(updateCurrentTime, 60000); // Actualiza cada minuto
+      const intervalId = setInterval(updateCurrentTime, 60000); // Actualiza cada minuto
+
+      // Limpia el intervalo cuando el componente se desmonte o el idioma cambie
+      return () => clearInterval(intervalId);
     }, delay);
 
-    // Limpia el intervalo al desmontar el componente
+    // Limpia el timeout al desmontar el componente o al cambiar el idioma
     return () => clearTimeout(timeoutId);
-  }, []);
+  }, [language]);
 
+  const { DIA_SEMANAL } = getCalendarTranslations(language);
   const { YEAR_ACTUAL, MES_ACTUAL, DIA_ACTUAL, FRASE_FECHA, TIME_ACTUAL } =
     currentTime;
   const { DiasMesActual, numberUltimoDia, primerDiaSemanalFormat } =
@@ -62,7 +74,7 @@ export default function Calendar() {
           {DiasMesActual.map((day, index) => (
             <span
               className={`calendar__content__calendar__day ${mesActual(
-                index
+                index,
               )} ${diaActual(day)} ${diaSelect(index)}`}
               key={index}
               onClick={() => setDiaSelectNumber(index)}

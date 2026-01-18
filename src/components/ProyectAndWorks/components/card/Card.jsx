@@ -1,16 +1,13 @@
 import UseProyect from "../../hooks/UseProyect";
-import UseSuggestions from "../../hooks/UseSuggestions";
 import "./Card.css";
 
 export default function Card(params) {
   const { data } = params;
-  const { saveTags } = UseSuggestions();
-  const { saveProject } = UseProyect();
-  const { icon, img, tags } = data;
+  const { saveSelectedProject } = UseProyect();
+  const { icon, img } = data;
 
   const selectProyect = () => {
-    saveTags(tags);
-    saveProject(data);
+    saveSelectedProject(data);
   };
 
   return (

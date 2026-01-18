@@ -3,17 +3,28 @@ import "./ProyectDetail.css";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import UseSuggestions from "../../hooks/UseSuggestions";
 import UseProyect from "../../hooks/UseProyect";
+import { useTranslation } from "../../../../utils/useTranslation";
 
 export default function ProyectDetail() {
-  const { ContextProject, saveProject } = UseProyect();
+  const { selectedProject, saveSelectedProject } = UseProyect();
   const { defaultSuggestions } = UseSuggestions();
-  const { img, detail } = ContextProject;
-  const { titulo, descripcion, a } = detail;
+  const { language } = useTranslation();
+  const { img, detail } = selectedProject;
 
   const clickClose = () => {
-    defaultSuggestions();
-    saveProject({});
+    saveSelectedProject(null);
   };
+
+  // Obtener el título y descripción en el idioma actual
+  const titulo =
+    typeof detail.titulo === "object"
+      ? detail.titulo[language] || detail.titulo.es
+      : detail.titulo;
+
+  const descripcion =
+    typeof detail.descripcion === "object"
+      ? detail.descripcion[language] || detail.descripcion.es
+      : detail.descripcion;
 
   return (
     <section className="projects-content__cards__proyect details">
@@ -29,7 +40,7 @@ export default function ProyectDetail() {
       <section className="projects-content__cards__proyect__detail">
         <aside className="projects-content__cards__proyect__detail__title">
           <a
-            href={a}
+            href={detail.a}
             target="_blank"
             rel="noopener noreferrer"
             className="projects-content__cards__proyect__detail__ancord"

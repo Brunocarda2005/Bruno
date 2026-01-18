@@ -1,0 +1,122 @@
+.language-switch {
+  z-index: 1000;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+.language-switch__container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(10, 14, 21, 0.8);
+  padding: 0.5rem 0.8rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(92, 119, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.language-switch__container:hover {
+  border-color: var(--color-secundario);
+  box-shadow: 0 0 15px rgba(92, 119, 255, 0.2);
+}
+
+.language-switch__label {
+  font-size: 0.75em;
+  font-weight: 600;
+  color: var(--color-terciario);
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.language-switch__label.active {
+  color: var(--color-secundario);
+}
+
+.language-switch__toggle {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  background-color: rgba(133, 133, 133, 0.2);
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0;
+  overflow: hidden;
+}
+
+.language-switch__toggle:hover {
+  background-color: rgba(133, 133, 133, 0.3);
+}
+
+.language-switch__toggle:focus {
+  outline: 2px solid var(--color-secundario);
+  outline-offset: 2px;
+}
+
+.language-switch__toggle__slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(135deg, var(--color-secundario), #4a62d8);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.language-switch__toggle__slider.en {
+  transform: translateX(18px);
+}
+
+.language-switch__toggle:active .language-switch__toggle__slider {
+  width: 22px;
+}
+
+/* Animación al cambiar */
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 2px 10px rgba(92, 119, 255, 0.5);
+  }
+}
+
+.language-switch__toggle:active .language-switch__toggle__slider {
+  animation: pulse 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .language-switch {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .language-switch__container {
+    padding: 0.4rem 0.6rem;
+  }
+
+  .language-switch__label {
+    font-size: 0.7em;
+  }
+
+  .language-switch__toggle {
+    width: 36px;
+    height: 20px;
+  }
+
+  .language-switch__toggle__slider {
+    width: 16px;
+    height: 16px;
+  }
+
+  .language-switch__toggle__slider.en {
+    transform: translateX(16px);
+  }
+}

@@ -4,7 +4,7 @@ import Start from "../start/Start";
 import ProyectsAndWorks from "../ProyectAndWorks/ProyectsAndWorks";
 import Footer from "../footer/Footer";
 import Skills from "../skills/Skills";
-import UseState from "../../context/useContext";
+import ContextProvider from "../../context/useContext";
 import Contact from "../contact/Contact";
 
 export default function Main() {
@@ -12,10 +12,10 @@ export default function Main() {
     <>
       <Header />
       <Start />
-      <UseState>
+      <ContextProvider>
         <ProyectsAndWorks />
         <Skills />
-      </UseState>
+      </ContextProvider>
       <Contact />
       <Footer />
     </>

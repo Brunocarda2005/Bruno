@@ -4,28 +4,20 @@ import { Seeker } from "./components/seeker/Seeker";
 import Suggestions from "./components/suggestion/Suggestion";
 
 export default function Serch() {
-  const { saveTags, contextTags } = UseSuggestions();
+  const { updateTagStatus, tags } = UseSuggestions();
 
-  const changeActive = (id, boolean) => {
-    saveTags(
-      contextTags.map((tag) =>
-        tag.id === id ? { ...tag, active: boolean } : tag
-      )
-    );
+  const handleTagDeactivate = (id) => {
+    updateTagStatus(id, false);
   };
 
-  const handleTagClickDes = (id) => {
-    changeActive(id, false);
-  };
-
-  const handleTagClickAc = (id) => {
-    changeActive(id, true);
+  const handleTagActivate = (id) => {
+    updateTagStatus(id, true);
   };
 
   return (
     <main className="buscador">
-      <Seeker handleTagClickAc={handleTagClickAc} />
-      <Suggestions handleTagClick={handleTagClickDes} />
+      <Seeker handleTagClickAc={handleTagActivate} tags={tags} />
+      <Suggestions handleTagClick={handleTagDeactivate} tags={tags} />
     </main>
   );
 }

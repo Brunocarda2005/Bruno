@@ -3,42 +3,26 @@ import { useContext, useEffect } from "react";
 import Context from "../../../context/Context";
 import Cycle from "../../../static/fotos/cycle.jpg";
 import ArWeb from "../../../static/fotos/arwebstudio_logo.jpg";
+import { useTranslation } from "../../../utils/useTranslation";
 
 export default function InfoSkill() {
-  const { StateGlobal } = useContext(Context);
+  const { globalState } = useContext(Context);
+  const { language } = useTranslation();
   const EMPRESAS = [Cycle, ArWeb];
 
-  useEffect(() => {
-    console.log(StateGlobal.skills);
-  }, [StateGlobal.skills]);
-
   const empresasByState = () => {
-    const empresa = StateGlobal.skills.empresa || [];
-    if (empresa.length > 1) {
-      return empresa.map((data, index) => {
-        return (
-          <img
-            className="title-skills-content-img-empresa"
-            src={EMPRESAS[data]}
-            alt={StateGlobal.skills.alt}
-            key={index}
-          />
-        );
-      });
-    } else if (empresa.length > 0) {
-      const [data] = empresa;
-      const empresaIMG = EMPRESAS[data];
+    const empresas = globalState.skills.companies || [];
 
+    return empresas.map((data, index) => {
       return (
         <img
           className="title-skills-content-img-empresa"
-          src={empresaIMG}
-          alt={StateGlobal.skills.alt}
+          src={EMPRESAS[data]}
+          alt={globalState.skills.alt}
+          key={index}
         />
       );
-    } else {
-      return "";
-    }
+    });
   };
 
   return (
@@ -49,14 +33,19 @@ export default function InfoSkill() {
           <picture>
             <img
               className="title-skills-content-img-empresa"
-              src={StateGlobal.skills.img}
-              alt={StateGlobal.skills.alt}
+              src={globalState.skills.img}
+              alt={globalState.skills.alt}
             />
           </picture>
         </div>
-        <p className="title-skills-content-des">{StateGlobal.skills.des}</p>
+        <p className="title-skills-content-des">
+          {typeof globalState.skills.description === "object"
+            ? globalState.skills.description[language] ||
+              globalState.skills.description.es
+            : globalState.skills.description}
+        </p>
         <h4 className="title-skills-content-level">
-          {StateGlobal.skills.level}
+          {globalState.skills.level}
         </h4>
       </section>
     </main>

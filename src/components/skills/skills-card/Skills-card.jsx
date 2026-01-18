@@ -3,18 +3,18 @@ import { useContext } from "react";
 import Context from "../../../context/Context";
 
 export default function SkillsCard(params) {
-  const { Pattern, des, stats, alt, empresa } = params;
-  const { setStateGlobal } = useContext(Context);
+  const { Pattern, des, stats, alt, companies } = params;
+  const { setGlobalState } = useContext(Context);
 
   const SaveData = () => {
-    setStateGlobal((lastData) => ({
-      ...lastData,
+    setGlobalState((prevState) => ({
+      ...prevState,
       skills: {
-        des: des,
+        description: des,
         level: stats,
         img: Pattern,
         alt: alt,
-        empresa: empresa,
+        companies: companies,
       },
     }));
   };

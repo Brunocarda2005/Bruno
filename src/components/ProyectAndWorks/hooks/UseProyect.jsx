@@ -1,45 +1,58 @@
-import { useContext } from "react";
+import { useContext, useCallback, useMemo } from "react";
 import Context from "../../../context/Context";
 
 export default function UseProyect() {
-  const { setStateGlobal, StateGlobal } = useContext(Context); // Accede al estado global y el setter
+  const { setGlobalState, globalState } = useContext(Context);
 
   /**
-   * Verifies if a tag is active.
-   *
-   * @param {string} id - The id of the tag to check.
-   * @param {Array} TAGS_ALL - An array of all available tags.
-   * @returns {boolean} True if the tag is active, false otherwise.
+   * Verifica si un tag está activo.
+   * @param {string} id - El id del tag a verificar.
+   * @param {Array} allTags - Array de todos los tags disponibles.
+   * @returns {boolean} True si el tag está activo, false en caso contrario.
    */
-  const filter = (id, TAGS_ALL) => {
-    return TAGS_ALL.some((element) => element.id === id && element.active);
-  };
+  const isTagActive = useCallback((id, allTags) => {
+    return allTags.some((element) => element.id === id && element.active);
+  }, []);
 
   /**
-   * Verifies if a project has at least one active tag.
-   *
-   * @param {Array} tags - An array of tags associated with the project.
-   * @param {Array} tagsAll - An array of all available tags.
-   * @returns {boolean} True if the project has at least one active tag, false otherwise.
+   * Verifica si un proyecto tiene al menos un tag activo.
+   * @param {Array} projectTags - Array de tags asociados con el proyecto.
+   * @param {Array} allTags - Array de todos los tags disponibles.
+   * @returns {boolean} True si el proyecto tiene al menos un tag activo.
    */
-  const filterByProyect = (tags, tagsAll) => {
-    return tags.some(({ id }) => filter(id, tagsAll));
-  };
+  const hasActiveTag = useCallback(
+    (projectTags, allTags) => {
+      return projectTags.some(({ id }) => isTagActive(id, allTags));
+    },
+    [isTagActive],
+  );
 
-  const isEmpty = () => Object.keys(StateGlobal.projects).length === 0;
+  /**
+   * Verifica si hay un proyecto seleccionado.
+   * @returns {boolean} True si no hay proyecto seleccionado.
+   */
+  const hasNoSelectedProject = useMemo(() => {
+    return globalState.selectedProject === null;
+  }, [globalState.selectedProject]);
 
-  // Actualiza los tags en el estado global cada vez que cambien las sugerencias locales
-  const saveProject = (projProp) => {
-    setStateGlobal((lastData) => ({
-      ...lastData,
-      projects: projProp,
-    }));
-  };
+  /**
+   * Guarda el proyecto seleccionado en el estado global.
+   * @param {Object|null} project - El proyecto a guardar o null para limpiar.
+   */
+  const saveSelectedProject = useCallback(
+    (project) => {
+      setGlobalState((prevState) => ({
+        ...prevState,
+        selectedProject: project,
+      }));
+    },
+    [setGlobalState],
+  );
 
   return {
-    filterByProyect,
-    ContextProject: StateGlobal.projects,
-    isEmpty,
-    saveProject,
+    hasActiveTag,
+    selectedProject: globalState.selectedProject,
+    hasNoSelectedProject,
+    saveSelectedProject,
   };
 }

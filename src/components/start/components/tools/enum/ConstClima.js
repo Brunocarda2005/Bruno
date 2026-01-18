@@ -1,8 +1,10 @@
 import nubladoSVG from "../../../../../static/svg/nublado.svg";
 import solSVG from "../../../../../static/svg/sol.svg";
+import moonSVG from "../../../../../static/svg/moon.svg";
 import lloviendoSVG from "../../../../../static/svg/lloviendo.svg";
-import truenoSVG from "../../../../../static/svg/truenos.svg"
-import alertSVG from "../../../../../static/svg/warning.svg"
+import lloviendoNocheSVG from "../../../../../static/svg/lloviendo-noche.svg";
+import truenoSVG from "../../../../../static/svg/truenos.svg";
+import alertSVG from "../../../../../static/svg/warning.svg";
 
 export const ConstClima = {
   Clear: solSVG,
@@ -10,6 +12,8 @@ export const ConstClima = {
   Rain: lloviendoSVG,
   Drizzle: lloviendoSVG,
   Thunderstorm: truenoSVG,
+  Moon: moonSVG,
+  MoonRain: lloviendoNocheSVG,
   Snow: nubladoSVG,
   Mist: nubladoSVG,
   Smoke: nubladoSVG,
@@ -20,5 +24,5 @@ export const ConstClima = {
   Ash: alertSVG,
   Squall: alertSVG,
   Tornado: alertSVG,
-  Unknown: 0,
+  Unknown: solSVG,
 };

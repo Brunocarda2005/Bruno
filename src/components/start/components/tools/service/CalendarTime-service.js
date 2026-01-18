@@ -1,28 +1,20 @@
-// Constantes con los nombres de meses y días de la semana en español
-export const MESES = [
-  "Enero",
-  "Febrero",
-  "Marzo",
-  "Abril",
-  "Mayo",
-  "Junio",
-  "Julio",
-  "Agosto",
-  "Septiembre",
-  "Octubre",
-  "Noviembre",
-  "Diciembre",
-];
+import { translations } from "../../../../../utils/translations";
 
-export const DIA_SEMANAL = [
-  "Lunes",
-  "Martes",
-  "Miércoles",
-  "Jueves",
-  "Viernes",
-  "Sábado",
-  "Domingo",
-];
+/**
+ * Obtiene los nombres de meses y días según el idioma
+ * @param {string} language - Idioma actual ('es' o 'en')
+ * @returns {Object} Objeto con arrays MESES y DIA_SEMANAL
+ */
+export const getCalendarTranslations = (language = "es") => {
+  return {
+    MESES: translations[language].calendar.months,
+    DIA_SEMANAL: translations[language].calendar.days,
+  };
+};
+
+// Constantes con los nombres de meses y días de la semana en español (por defecto)
+export const MESES = translations.es.calendar.months;
+export const DIA_SEMANAL = translations.es.calendar.days;
 
 // Array para almacenar los observadores de cambio de fecha y hora
 let dateObservers = [];
@@ -80,10 +72,13 @@ const TimeFormatter = (Hora, Minutos) => {
 /**
  * Genera y retorna un objeto con constantes de la fecha y hora actual.
  *
+ * @param {string} language - Idioma para los nombres de días y meses ('es' o 'en')
  * @returns {Object} Contiene el año, mes, día del mes, hora, minuto, día de la semana,
  *                   una frase formateada de la fecha y la hora formateada.
  */
-export const getDateTimeConstants = () => {
+export const getDateTimeConstants = (language = "es") => {
+  const { MESES, DIA_SEMANAL } = getCalendarTranslations(language);
+
   const FECHA_ACTUAl = new Date();
   const YEAR_ACTUAL = FECHA_ACTUAl.getFullYear();
   const MES_ACTUAL = FECHA_ACTUAl.getMonth() + 1;
@@ -93,7 +88,7 @@ export const getDateTimeConstants = () => {
   const DIA_SEMANAL_ACTUAL = FECHA_ACTUAl.getDay();
 
   const diaActualFormatted = IsDomingo(DIA_SEMANAL_ACTUAL) - 1;
-  const FRASE_FECHA = `${DIA_SEMANAL[diaActualFormatted]} ${DIA_ACTUAL} de ${
+  const FRASE_FECHA = `${DIA_SEMANAL[diaActualFormatted]} ${DIA_ACTUAL} ${language === "es" ? "de" : ""} ${
     MESES[MES_ACTUAL - 1]
   }`;
   const TIME_ACTUAL = `${TimeFormatter(HORA_ACTUAL, MINUTO_ACTUAL)}`;
@@ -108,6 +103,13 @@ export const getDateTimeConstants = () => {
     FRASE_FECHA,
     TIME_ACTUAL,
   };
+};
+
+export const getTimeDay = () => {
+  const FECHA_ACTUAl = new Date();
+  const HORA_ACTUAL = FECHA_ACTUAl.getHours();
+
+  return HORA_ACTUAL > 19 || HORA_ACTUAL < 6;
 };
 
 /**

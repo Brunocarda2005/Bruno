@@ -4,39 +4,32 @@ import Card from "../card/Card";
 import ProyectDetail from "../proyectDetail/ProyectDetail";
 import UseProyect from "../../hooks/UseProyect";
 import UseSuggestions from "../../hooks/UseSuggestions";
+import { useMemo } from "react";
+import { useTranslation } from "../../../../utils/useTranslation";
 
 export function Proyect() {
-  const { filterByProyect, isEmpty } = UseProyect();
-  const { contextTags } = UseSuggestions();
+  const { hasActiveTag, hasNoSelectedProject } = UseProyect();
+  const { tags } = UseSuggestions();
+  const { t } = useTranslation();
 
-  /**
-   * Function to filter and render project cards based on the selected tags.
-   *
-   * @param {Object} data - The project data object containing properties: key, icon, img, detail, and tags.
-   * @param {string} data.key - Unique identifier for the project.
-   * @param {string} data.icon - Icon URL for the project.
-   * @param {string} data.img - Image URL for the project.
-   * @param {Object} data.detail - Detailed information about the project.
-   * @param {Array<number>} data.tags - Array of tags associated with the project.
-   *
-   * @returns {JSX.Element|null} - Returns a Card component if the project should be rendered, otherwise returns null.
-   */
-  const filterCard = (data) => {
-    const { key, tags } = data;
-
-    // Evaluate if the project should be rendered
-    return filterByProyect(tags, contextTags) ? (
-      <Card key={key} data={data} />
-    ) : null;
-  };
+  // Memoizar la lista de proyectos filtrados para evitar cálculos innecesarios
+  const filteredProjects = useMemo(() => {
+    return DataProyect.filter((project) => hasActiveTag(project.tags, tags));
+  }, [tags, hasActiveTag]);
 
   return (
     <section className="projects-content">
       <section className="projects-content__cards">
-        {isEmpty() ? (
-          DataProyect.map((data) => {
-            return filterCard(data); // Filtrar y renderizar proyectos
-          })
+        {hasNoSelectedProject ? (
+          filteredProjects.length > 0 ? (
+            filteredProjects.map((project) => (
+              <Card key={project.key} data={project} />
+            ))
+          ) : (
+            <div className="projects-content__no-results">
+              <p>{t("projects.noResults")}</p>
+            </div>
+          )
         ) : (
           <ProyectDetail />
         )}

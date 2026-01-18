@@ -12,16 +12,16 @@ const dataLink = [
     icone: Home
   },
   {
-    link: "#skills",
-    text: "Skills",
-    id: "002-002-2",
-    icone: Skills
-  },
-  {
     link: "#projects",
     text: "Projects",
     id: "003-003-3",
     icone: Projects
+  },
+  {
+    link: "#skills",
+    text: "Skills",
+    id: "002-002-2",
+    icone: Skills
   },
   {
     link: "#contact",

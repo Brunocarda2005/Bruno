@@ -2,23 +2,26 @@ import { useEffect } from "react";
 import UseSuggestions from "../../../../hooks/UseSuggestions";
 import "./Suggestion.css";
 import Tag from "./tag/Tag";
+import { useTranslation } from "../../../../../../utils/useTranslation";
 
-export default function Suggestions(params) {
-  const { contextTags, defaultSuggestions } = UseSuggestions();
-  const { handleTagClick } = params;
+export default function Suggestions({ handleTagClick, tags }) {
+  const { generateDefaultTags } = UseSuggestions();
+  const { t } = useTranslation();
 
-  // Llama a defaultSuggestions solo si suggestionsActive está vacío
+  // Generar tags por defecto solo si está vacío
   useEffect(() => {
-    if (contextTags.length === 0) {
-      defaultSuggestions();
+    if (tags.length === 0) {
+      generateDefaultTags();
     }
-  }, []);
+  }, [tags.length, generateDefaultTags]);
+
+  const activeTags = tags.filter((tag) => tag.active);
 
   return (
     <section className="suggestion">
       <div className="suggestion__content">
-        {contextTags.map((tag) =>
-          tag.active ? (
+        {activeTags.length > 0 ? (
+          activeTags.map((tag) => (
             <Tag
               key={tag.id}
               nombre={tag.nombre}
@@ -26,7 +29,11 @@ export default function Suggestions(params) {
               id={tag.id}
               click={handleTagClick}
             />
-          ) : null
+          ))
+        ) : (
+          <div className="suggestion__empty">
+            <p>{t("projects.selectTags")}</p>
+          </div>
         )}
       </div>
     </section>

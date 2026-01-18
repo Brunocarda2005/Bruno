@@ -1,25 +1,26 @@
 import "./StartAbout.css";
-import cv from "../../../../assets/CV INGLES.docx.pdf";
+import cv from "../../../../assets/Bruno-Cardamone-CV.pdf";
 import brunoIMG from "../../../../static/fotos/bruno.webp";
 import logoCV from "../../../../static/svg/logoCV.svg";
+import { useTranslation } from "../../../../utils/useTranslation";
+import LanguageSwitch from "../lenguageSwitch/LanguageSwitch";
 
 export default function StartAbout() {
+  const { t } = useTranslation();
   return (
     <aside className="main__content-grid__container about box-shadow">
       <section className="main__content-grid__container__about">
         <h1 className="main__content-grid__container__about__title">
-          Bruno <span className="title_blue">Cardamone</span>
+          {t("start.about.name")}{" "}
+          <span className="title_blue">{t("start.about.lastName")}</span>
         </h1>
         <p className="main__content-grid__container__about__text">
-          Desarrollador web full-stack con 2 años de experiencia, especializado
-          en front-end. Autodidacta y certificado, me enfoco en crear proyectos
-          eficientes y centrados en el usuario, superando expectativas y
-          aportando valor en cada trabajo.
+          {t("start.about.description")}
         </p>
         <div className="main__content-grid__container__about__link">
           <a
             className="main__content-grid__container__about__link__ancord"
-            download={"Curriculum"}
+            download={"Bruno-Cardamone-CV"}
             href={cv}
           >
             <img
@@ -28,6 +29,8 @@ export default function StartAbout() {
               alt="CV Curriculum vitae Hoja de Vida Bruno Cardamone"
             />
           </a>
+
+          <LanguageSwitch />
         </div>
       </section>
       <section className="main__content-grid__container__image">

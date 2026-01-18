@@ -1,9 +1,11 @@
 "use strict";
 import imgLogo from "../../../../static/fotos/fondoLinkedin.jpg";
 import { Content } from "../../enum/content";
+import { useTranslation } from "../../../../utils/useTranslation";
 
 export default function HeaderContact(params) {
   const { change, content } = params;
+  const { t } = useTranslation();
 
   return (
     <aside className="app__contact__conten__about">
@@ -22,19 +24,10 @@ export default function HeaderContact(params) {
       </section>
       <section className="app__contact__conten__about__aboutText">
         <h5 className="app__contact__conten__about__aboutText__title">
-          About me
+          {t("contact.aboutMe")}
         </h5>
         <article className="app__contact__conten__about__aboutText__text">
-          <p>
-            Como Desarrollador Web Full Stack en Cycle Integrated Services, me
-            especializo en front-end, creando aplicaciones web con Next.js y
-            AngularJS, asegurando interfaces optimizadas y back-ends sólidos. Mi
-            trabajo en equipos multidisciplinarios ha dado como resultado
-            proyectos que mejoran la experiencia del usuario mientras cumplen
-            con altos estándares técnicos. Impulsado por la innovación y la
-            eficiencia, busco desarrollar tecnología que transforme
-            positivamente la vida de las personas.
-          </p>
+          <p>{t("contact.aboutText")}</p>
         </article>
       </section>
       <section className="app__contact__conten__about__change">
@@ -46,7 +39,7 @@ export default function HeaderContact(params) {
               }`}
               onClick={() => change(Content.CONTACT)}
             >
-              Contacto
+              {t("contact.tabs.contact")}
             </div>
             <div
               className={`app__contact__conten__about__change__content__links__link experiencia-link show-${
@@ -54,7 +47,7 @@ export default function HeaderContact(params) {
               }`}
               onClick={() => change(Content.EXPERIENCE)}
             >
-              Experiencia
+              {t("contact.tabs.experience")}
             </div>
           </article>
         </div>

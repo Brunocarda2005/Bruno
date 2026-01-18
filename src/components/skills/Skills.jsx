@@ -18,7 +18,7 @@ export default function Skills() {
                   des={data.des}
                   stats={data.stats}
                   alt={data.alt}
-                  empresa={data.empresa}
+                  companies={data.empresa}
                 />
               );
             })}

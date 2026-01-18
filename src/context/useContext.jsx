@@ -1,27 +1,33 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import { CardData } from "../static/const/dataSkills";
 import Context from "./Context";
 
-export default function UseState(params) {
-  const [StateGlobal, setStateGlobal] = useState({
-    skills: {
-      des: "Lo mejor de mi experiencia con React fue descubrir esta poderosa librería y sumergirme en su enfoque innovador. Me enamoré de la manera en que React gestiona los estados y los contextos, permitiendo un control preciso y eficiente de los datos en las aplicaciones. Además, la programación reactiva transformó mi perspectiva, ofreciéndome una forma fluida y dinámica de desarrollar interfaces interactivas que responden en tiempo real a los cambios del usuario.",
-      level: "intermediate",
-      img: "https://brunocarda2005.github.io/Bruno/assets/react-V2XtNuWi.svg",
-      alt: "react bruno cardamone skills",
-      empresa: [0],
-    },
-    tags: [],
-    projects: {},
-  });
+// Estado inicial separado para mejor mantenimiento
+const skill = CardData.find((item) => item.id === 15);
 
-  return (
-    <Context.Provider
-      value={{
-        StateGlobal,
-        setStateGlobal,
-      }}
-    >
-      {params.children}
-    </Context.Provider>
+const INITIAL_STATE = {
+  skills: {
+    description: skill.des,
+    level: skill.stats,
+    img: skill.img,
+    alt: skill.alt,
+    companies: skill.empresa,
+  },
+  tags: [],
+  selectedProject: null,
+};
+
+export default function ContextProvider({ children }) {
+  const [globalState, setGlobalState] = useState(INITIAL_STATE);
+
+  // Memoizar el valor del contexto para evitar renders innecesarios
+  const contextValue = useMemo(
+    () => ({
+      globalState,
+      setGlobalState,
+    }),
+    [globalState],
   );
+
+  return <Context.Provider value={contextValue}>{children}</Context.Provider>;
 }

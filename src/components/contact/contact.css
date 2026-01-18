@@ -1,6 +1,6 @@
 .app__contact {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +10,7 @@
 
 .app__contact__conten {
   width: 90%;
+  height: 100%;
   position: relative;
   background-color: #171719;
   box-shadow: var(--box-shadow);
@@ -148,7 +149,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  overflow-y: auto;
 }
 
 .app__contact__conten__cards__content {
@@ -156,15 +157,15 @@
   height: 100%;
   min-height: 15rem;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   gap: 1rem;
 }
 
 .app__contact__conten__cards__content__card {
   width: 100%;
-  max-width: 12rem;
-  height: 5rem;
+  max-width: 15rem;
+  height: 7rem;
   border-radius: var(--border-radius-med);
   box-shadow: var(--box-shadow);
   display: flex;
@@ -176,10 +177,11 @@
   z-index: 6;
   .app__contact__conten__cards__content__card__title {
     width: 100%;
-    font-size: 0.7em;
+    font-size: 1em;
+    font-weight: bold;
   }
   .app__contact__conten__cards__content__card__link {
-    font-size: 0.4em;
+    font-size: 0.7em;
     width: 100%;
     display: flex;
     justify-content: end;
@@ -194,6 +196,8 @@
   background-color: #0e76a8;
   .app__contact__conten__cards__content__card__link span {
     background-color: #0a0e15;
+    padding: 0.3rem 1rem;
+    border-radius: 0.2rem;
   }
 }
 
@@ -201,6 +205,8 @@
   background-color: #0a0e15;
   .app__contact__conten__cards__content__card__link span {
     background-color: #0e76a8;
+    padding: 0.3rem 1rem;
+    border-radius: 0.2rem;
   }
 }
 
@@ -224,7 +230,7 @@
 @media (min-width: 900px) {
   .app__contact__conten {
     width: 80%;
-    height: 80%;
+    height: 95%;
     flex-direction: row;
   }
   .app__contact__conten__about {
@@ -245,19 +251,21 @@
     }
     .app__contact__conten__about__aboutText__text {
       width: 100%;
-      font-size: .8em;
+      font-size: 0.8em;
       margin-top: 0.2rem;
     }
   }
 
   .app__contact__conten__cards {
     width: 100%;
+    height: 95%;
     align-items: start;
     padding-top: 1.5rem;
   }
+
   .app__contact__conten__cards__content {
     width: 90%;
-    height: 80%;
+    height: 100%;
     flex-direction: row;
     justify-content: center;
     align-items: start;
